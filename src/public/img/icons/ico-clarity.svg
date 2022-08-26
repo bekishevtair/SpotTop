@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="ico-clarity" transform="translate(-300 -3012)">
+    <circle id="Эллипс_2" data-name="Эллипс 2" cx="20" cy="20" r="20" transform="translate(300 3012)" fill="#dff8ec"/>
+    <g id="analytics-chart" transform="translate(308.986 3021.93)">
+      <rect id="Прямоугольник_723" data-name="Прямоугольник 723" width="3.056" height="7.498" rx="0.5" transform="translate(2 10.702)" fill="#9dedc6"/>
+      <rect id="Прямоугольник_724" data-name="Прямоугольник 724" width="3.056" height="10.492" rx="0.5" transform="translate(6.981 7.707)" fill="#9dedc6"/>
+      <path id="Контур_1501" data-name="Контур 1501" d="M60.245,58h-2.7a.18.18,0,0,0-.18.18v7.141a.18.18,0,0,0,.18.18h2.7a.18.18,0,0,0,.18-.18V58.18A.18.18,0,0,0,60.245,58Z" transform="translate(-45.406 -47.302)" fill="#9dedc6"/>
+      <rect id="Прямоугольник_725" data-name="Прямоугольник 725" width="3.056" height="10.492" rx="0.5" transform="translate(16.944 7.707)" fill="#9dedc6"/>
+      <path id="Контур_1502" data-name="Контур 1502" d="M4.434,21.48A1.877,1.877,0,1,0,6.3,23.357,1.877,1.877,0,0,0,4.434,21.48Z" transform="translate(-0.451 -16.818)" fill="#9dedc6"/>
+      <circle id="Эллипс_51" data-name="Эллипс 51" cx="1.877" cy="1.877" r="1.877" transform="translate(16.142 1.775)" fill="#9dedc6"/>
+      <circle id="Эллипс_52" data-name="Эллипс 52" cx="1.684" cy="1.684" r="1.684" transform="matrix(0.851, -0.526, 0.526, 0.851, 11.021, 6.184)" fill="#9dedc6"/>
+      <circle id="Эллипс_53" data-name="Эллипс 53" cx="1.877" cy="1.877" r="1.877" transform="translate(6.203 2.636) rotate(-22.5)" fill="#9dedc6"/>
+      <path id="Контур_1503" data-name="Контур 1503" d="M32.542,21.556a2.06,2.06,0,0,1,.282.463l1.228-.878a2.251,2.251,0,0,1-.333-.427Zm-4.3-.946a2.226,2.226,0,0,1-.309.443l1.163.939a2.043,2.043,0,0,1,.288-.461Zm-3.83.187-.924.665a2.177,2.177,0,0,1,.232.5l1.043-.754a2.194,2.194,0,0,1-.351-.411Z" transform="translate(-17.616 -16.07)" fill="#9dedc6"/>
+    </g>
+  </g>
+</svg>
