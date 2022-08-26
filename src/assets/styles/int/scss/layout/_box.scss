@@ -1,0 +1,7 @@
+@media (min-width: $s-xs) {
+  .box {
+    
+  }
+}
+@include BTNSCALE($btn-scales-options);
+@include BTNWIDTH(80, 320);

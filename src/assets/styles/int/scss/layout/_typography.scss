@@ -1,0 +1,31 @@
+@include FONT();
+@include TEXTPROPS();
+
+@media (min-width: $s-xs) {
+  p, a, b, i, li, ol, ul, h1, h2, h3, h4, h5, h6, span, label, input, textarea, button {
+    font-family: 'Inter', sans-serif; // use as default font
+  }
+  .tit, .txt, .src {
+    &.lh {
+      &-1 { // or use (ex.) &-125 {}
+        line-height: 1.25;
+      }
+      &-2 { // or use (ex.) &-175 {}
+        line-height: 1.75;
+      }
+    }
+    &.tf {
+      &-inter { // or use &-1 {}
+        font-family: 'Inter', sans-serif;
+      }
+      &-ibmplexsans { // or use &-2 {}
+        font-family: 'IBMPlexSans', sans-serif;
+      }
+    }
+  }
+}
+@media (min-width: $s-sm) {}
+@media (min-width: $s-md) {}
+@media (min-width: $s-lg) {}
+@media (min-width: $s-xl) {}
+@media (min-width: $s-xxl) {}

@@ -1,0 +1,64 @@
+// Media sizes
+$res: 'xs', 'sm', 'md', 'lg', 'xl', 'xxl';
+
+$gbp: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+$s-xs: map-get($gbp, xs);
+$s-sm: map-get($gbp, sm);
+$s-md: map-get($gbp, md);
+$s-lg: map-get($gbp, lg);
+$s-xl: map-get($gbp, xl);
+$s-xxl: map-get($gbp, xxl);
+
+// Project paths
+$img: '../../../../public/img';
+
+// Black / White / Transparent
+$b: #000000 !default;
+$w: #FFFFFF !default;
+$t: rgba(255,255,255,0);
+
+// Default colors
+$dc: (
+  'error':   #d9181c,
+  'warning': #F0AD4E,
+  'success': #22BB33,
+  'hint':    #AAAAAA,
+);
+
+// Brand colors
+$bc: (
+  'white': #fcfcfc,
+  'black': #363636,
+  'red':   #ef4209,
+  'green': #07f070,
+  'blue':  #1170ff 
+);
+
+// Font options
+$fonts: 'IBMPlexSans', 'Inter';
+$font-weight: (
+  min: (
+    IBMPlexSans: 1,
+    Inter: 1
+  ),
+  max: (
+    IBMPlexSans: 9,
+    Inter: 9
+  )
+);
+$font-size: (min: 10, max: 60);
+$text-colors: 'white', 'black', 'red', 'green', 'blue';
+
+// Button options
+$btn-width: (min: 80, max: 320);
+
+// Header options
+$hh: (mob: 80px, desk: 100px);

@@ -1,0 +1,15 @@
+@media (min-width: $s-xs) {
+  .img, .ico {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .img {}
+  .ico {}
+}
+@media (min-width: $s-sm) {}
+@media (min-width: $s-md) {}
+@media (min-width: $s-lg) {}
+@media (min-width: $s-xl) {}
+@media (min-width: $s-xxl) {}

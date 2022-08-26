@@ -1,0 +1,27 @@
+@media (min-width: $s-xs) {
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    border: 0 solid rgba(0,0,0,0);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+}
+$btn-scales-options: (
+  s1: (ts: 12px, pd: 10px), // ts - text size; pd - padding
+  s2: (ts: 14px, pd: 12px),
+  s3: (ts: 16px, pd: 14px),
+  s4: (ts: 18px, pd: 16px)
+);
+@include BTNSCALE($btn-scales-options);
+@include BTNWIDTH(80, 320);
