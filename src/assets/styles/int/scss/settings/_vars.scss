@@ -35,27 +35,33 @@ $dc: (
 
 // Brand colors
 $bc: (
+  'light': #FBFBFC,
   'white': #fcfcfc,
   'black': #363636,
+  'gray': #aeafb2,
   'red':   #ef4209,
   'green': #07f070,
+  'lgreen': #9DEDC6,
+  'yellow': #f6d25d,
+  'orange': #f29d3e,
+  'dblue': #0c0d29,
   'blue':  #1170ff 
 );
 
 // Font options
-$fonts: 'IBMPlexSans', 'Inter';
+$fonts: 'Cera Pro', 'Inter';
 $font-weight: (
   min: (
-    IBMPlexSans: 1,
+    'Cera Pro': 1,
     Inter: 1
   ),
   max: (
-    IBMPlexSans: 9,
+    'Cera Pro': 9,
     Inter: 9
   )
 );
-$font-size: (min: 10, max: 60);
-$text-colors: 'white', 'black', 'red', 'green', 'blue';
+$font-size: (min: 10, max: 64);
+$text-colors: 'white', 'black', 'gray', 'red', 'green', 'blue', 'dblue', 'yellow';
 
 // Button options
 $btn-width: (min: 80, max: 320);

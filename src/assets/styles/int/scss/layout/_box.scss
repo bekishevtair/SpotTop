@@ -1,7 +1,58 @@
 @media (min-width: $s-xs) {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+  }
   .box {
-    
+    border-radius: 24px;
+    &-border {
+      padding: 24px;
+      &-award {
+        position: relative;
+        border: 2px solid map-get($bc , 'lgreen' );
+        min-height: 336px;
+        transition: all ease-in-out .2s;
+        &::after, &::before {
+          content: '';
+          position: absolute;
+        }
+        &::before {
+          top: 24px;
+          left: 24px;
+          width: 54px;
+          height: 54px;
+          background: url('../../../../../public/img/icons/ico-award.svg') center no-repeat;
+          z-index: 98;
+        }
+        &::after {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: inherit;
+          background: linear-gradient( 135deg, map-get($bc, 'lgreen'), map-get($bc, 'yellow'), map-get($bc, 'orange'));
+          z-index: 0;
+          opacity: 0;
+          transition: all ease-in-out .2s;
+        }
+        &:hover {
+          border: none;
+          transform: scale(1.1) translateY(-16px);
+          &::after {
+            opacity: 1;
+          }
+          .tit, .txt {
+            z-index: 2;
+            position: relative;
+            color: map-get($bc, 'dblue' ) !important;
+          }
+        }
+      }
+    }
   }
 }
-@include BTNSCALE($btn-scales-options);
-@include BTNWIDTH(80, 320);
+@media (min-width: $s-sm) {}
+@media (min-width: $s-md) {}
+@media (min-width: $s-lg) {}
+@media (min-width: $s-xl) {}
+@media (min-width: $s-xxl) {}

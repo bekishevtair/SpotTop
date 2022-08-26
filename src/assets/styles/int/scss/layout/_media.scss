@@ -5,11 +5,29 @@
       width: 100%;
     }
   }
-  .img {}
+  .img {
+    &-hp {
+      &-1woman {
+        border-radius: 100px;
+        max-width: 648px;
+      }
+      &-cards {
+        max-width: 312px;
+        border-radius: 14px;
+      }
+    }
+    &-logo {
+      &-footer {
+        max-width: 160px;
+      }
+    }
+  }
   .ico {}
 }
 @media (min-width: $s-sm) {}
 @media (min-width: $s-md) {}
-@media (min-width: $s-lg) {}
+@media (min-width: $s-lg) {
+
+}
 @media (min-width: $s-xl) {}
 @media (min-width: $s-xxl) {}
