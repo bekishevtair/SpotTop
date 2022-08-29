@@ -11,9 +11,18 @@
         border-radius: 100px;
         max-width: 648px;
       }
+      &-1man {
+        border-radius: 100px;
+        max-width: 648px;
+      }
       &-cards {
         max-width: 312px;
         border-radius: 14px;
+      }
+    }
+    &-dc {
+      &-phone {
+        max-width: 392px;
       }
     }
     &-logo {
@@ -22,7 +31,16 @@
       }
     }
   }
-  .ico {}
+  .ico {
+    &-circle {
+      &-w40 {
+        width: 40px;
+      }
+      &-w60 {
+        width: 60px;
+      }
+    }
+  }
 }
 @media (min-width: $s-sm) {}
 @media (min-width: $s-md) {}

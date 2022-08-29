@@ -13,7 +13,7 @@
 
     &__row {
       display: flex;
-      align-items: center;
+      align-items: end;
       justify-content: space-between;
     }
     &__col {
@@ -22,6 +22,8 @@
       }
     }
     &__logo {
+      padding-top: 10px;
+      margin: 0 70px 0 0;
       display: block;
       width: 180px;
       img {
@@ -46,15 +48,49 @@
       height: map-get($hh, 'mob');
       padding: 0 15px;
       text-decoration: none;
-      color: $b;
+      color: map-get($bc, 'gray' );
+      &:hover {
+        color: map-get($bc, 'orange' );
+      }
     }
     &__exp {
       position: relative;
       display: flex;
       justify-content: center;
       cursor: pointer;
+      &::after,
+      &::before {
+        content: '';
+        width: 10px;
+        height: 2px;
+        background: map-get($bc, 'gray' );
+        position: absolute;
+        top: 50px;
+        transition: all .2s ease-in-out;
+      }
+      &::after {
+        transform: rotate(40deg);
+        right: 20px;
+        
+      }
+      &::before {
+        transform: rotate(-40deg);
+        right: 14px;
 
+      }
+      &:hover {
+        &::before {
+          right: 20px;
+
+        }
+        &::after {
+          right: 14px;
+
+        }
+      }
       &-head {
+        min-width: fit-content;
+        padding-right: 34px;
         display: flex;
         align-items: center;
       }
@@ -69,49 +105,32 @@
         box-shadow: 0 0 20px 10px rgba($b, .05);
         visibility: hidden;
         opacity: 0;
-        transform: translateY(5px);
-        transition: all .1s ease-in-out;
-
-        &:before {
-          @include pseudo();
-          left: calc(50% - 12px);
-          top: -12px;
-          border: solid rgba(0,0,0,0);
-          height: 0;
-          width: 0;
-          pointer-events: none;
-          border-bottom-color: $w;
-          border-width: 0 12px 12px 12px;
-          z-index: 2;
-        }
+        transform: scaleY(0.7) translateY(-20%);
+        transition: all .2s ease-in-out;
       }
       &-link {
         white-space: nowrap;
         padding: 10px;
         text-decoration: none;
         border-radius: 5px;
-        color: $b;
-
+        color: $w;
+        transition: .2s;
         &:hover {
-          background: #ccc;
+          background: lighten(map-get($bc, 'orange' ), 34%);
         }
-      }
-      &-icon {
-        display: block;
-        width: 26px;
-        height: 26px;
-        background: url('#{$img}/ui/ico-dropdown.svg') center / 9.82px 6px no-repeat;
-        transition: all .2s ease-in-out;
       }
       &:hover {
         .header__exp {
           &-body {
             visibility: visible;
             opacity: 1;
-            transform: translateY(0);
+            transform: scaleY(1) translateY(0%);
           }
-          &-icon {
-            transform: rotate(-180deg)
+          &-link {
+            color: map-get($bc, 'gray' );
+            &:hover {
+              color: map-get($bc, 'orange' );
+            }
           }
         }
       }

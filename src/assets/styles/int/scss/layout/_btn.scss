@@ -19,6 +19,10 @@
       background: map-get($bc, 'yellow' );
       color: map-get($bc, 'dblue' );
     }
+    &-border {
+      border: 2px solid map-get($bc, 'gray' );
+      color: map-get($bc, 'dblue' );
+    }
   }
 }
 $btn-scales-options: (

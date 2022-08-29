@@ -1,10 +1,9 @@
 @media (min-width: $s-xs) {
   .form {
-    background: 
-    url('../../../../public/img/ui/bg-hp-form.png') center 100% no-repeat,
-    map-get($bc, 'dblue' );
     padding: 40px;
     border-radius: 20px;
+    border: 2px solid map-get($bc, 'gray' );
+    background: #21223b;
   }
   .checkbox {
     border: 20px;
@@ -13,14 +12,15 @@
     &__item {
       position: relative;
       &--field {
-        background: map-get($bc,'white' );
+        background: map-get($bc,'dblue' );
+        color: map-get($bc, 'lblue' );
         position: relative;
         display: block;
         width: 100%;
         height: 60px;
         padding: 14px 20px;
-        border-radius: 10px;
-        border: 2px solid map-get($bc, 'white' );
+        border-radius: 40px;
+        border: none;
         box-shadow: none;
         outline: none !important;
         font-size: 14px;
@@ -78,7 +78,7 @@
         }
 
         &::placeholder {
-          color: map-get($bc, 'lgreen' );
+          color: map-get($bc, 'lblue' );
           transition: all ease-in-out .2s;
           
         }

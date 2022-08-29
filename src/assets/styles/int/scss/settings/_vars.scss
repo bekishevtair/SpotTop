@@ -44,6 +44,7 @@ $bc: (
   'lgreen': #9DEDC6,
   'yellow': #f6d25d,
   'orange': #f29d3e,
+  'lblue': #7d7e90,
   'dblue': #0c0d29,
   'blue':  #1170ff 
 );
@@ -61,7 +62,7 @@ $font-weight: (
   )
 );
 $font-size: (min: 10, max: 64);
-$text-colors: 'white', 'black', 'gray', 'red', 'green', 'blue', 'dblue', 'yellow';
+$text-colors: 'white', 'black', 'gray', 'red', 'orange', 'green', 'blue', 'dblue', 'lblue', 'yellow';
 
 // Button options
 $btn-width: (min: 80, max: 320);

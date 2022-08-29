@@ -11,7 +11,8 @@
         position: relative;
         border: 2px solid map-get($bc , 'lgreen' );
         min-height: 336px;
-        transition: all ease-in-out .2s;
+        height: 100%;
+        transition: all ease-in-out .1s;
         &::after, &::before {
           content: '';
           position: absolute;
@@ -37,7 +38,8 @@
         }
         &:hover {
           border: none;
-          transform: scale(1.1) translateY(-16px);
+          height: 105%;
+          transform: translateY(-5%);
           &::after {
             opacity: 1;
           }
@@ -49,10 +51,31 @@
         }
       }
     }
+    &-bg {
+      &-gray {
+        padding: 30px;
+        padding-bottom: 0;
+        background: lighten(map-get($bc, 'gray' ), 30%);
+      }
+    }
   }
 }
 @media (min-width: $s-sm) {}
 @media (min-width: $s-md) {}
-@media (min-width: $s-lg) {}
+@media (min-width: $s-lg) {
+  .box {
+    &-border {
+      &-award {
+      }
+    }
+    &-bg {
+      &-gray {
+        padding: 60px;
+        padding-bottom: 0;
+
+      }
+    }
+  }
+}
 @media (min-width: $s-xl) {}
 @media (min-width: $s-xxl) {}
