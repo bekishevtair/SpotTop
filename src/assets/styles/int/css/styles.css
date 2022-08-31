@@ -1095,11 +1095,12 @@ table {
   }
   .header__logo {
     display: block;
-    width: 180px;
+    width: 128px;
   }
   .header__logo img {
-    display: block;
     width: 100%;
+    position: relative;
+    top: -6px;
   }
   .header__routes {
     display: flex;
@@ -1133,7 +1134,7 @@ table {
     height: 2px;
     background: #aeafb2;
     position: absolute;
-    top: 50px;
+    top: 51px;
     transition: all 0.2s ease-in-out;
   }
   .header__exp::before {
@@ -1145,10 +1146,10 @@ table {
     right: 20px;
   }
   .header__exp:hover::before {
-    transform: rotate(40deg);
+    right: 20px;
   }
   .header__exp:hover::after {
-    transform: rotate(140deg);
+    right: 14px;
   }
   .header__exp-head {
     min-width: fit-content;
@@ -1166,8 +1167,8 @@ table {
     background: #FFFFFF;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
     visibility: hidden;
-    opacity: 0;
-    transform: scaleY(0.7) translateY(-20%);
+    opacity: 0.7;
+    transform: scale(0.1) translateY(-600%) translateX(300px);
     transition: all 0.2s ease-in-out;
   }
   .header__exp-link {
@@ -1184,7 +1185,7 @@ table {
   .header__exp:hover .header__exp-body {
     visibility: visible;
     opacity: 1;
-    transform: scaleY(1) translateY(0%);
+    transform: translateY(0%) translateX(0px) scale(1);
   }
   .header__exp:hover .header__exp-link {
     color: #aeafb2;
@@ -1568,9 +1569,16 @@ table {
     background: #f6d25d;
     color: #0c0d29;
   }
+  .btn-gray {
+    background: #e2e3e4;
+    color: #0c0d29;
+  }
   .btn-border {
     border: 2px solid #aeafb2;
     color: #0c0d29;
+  }
+  .btn-border-yellow {
+    border: 2px solid #f6d25d;
   }
   .btn-light {
     background: #FBFBFC;
@@ -1990,6 +1998,37 @@ table {
   .view--platform .section:nth-of-type(2) {
     margin-bottom: 80px;
   }
+  .view--platform .section:nth-of-type(3) {
+    margin-bottom: 80px;
+  }
+  .view--accounts .section:nth-of-type(1) {
+    padding: 40px 0 0 0;
+    margin-bottom: 60px;
+  }
+  .view--accounts .section:nth-of-type(2) {
+    margin-bottom: 80px;
+  }
+  .view--about .section:nth-of-type(1) {
+    padding: 40px 0 0 0;
+    margin-bottom: 60px;
+  }
+  .view--about .section:nth-of-type(2) {
+    margin-bottom: 80px;
+  }
+  .view--about .section:nth-of-type(3) {
+    margin-bottom: 80px;
+  }
+  .view--security .section:nth-of-type(1) {
+    padding: 40px 0 0 0;
+    margin-bottom: 100px;
+  }
+  .view--security .section:nth-of-type(2) {
+    margin-bottom: 80px;
+  }
+  .view--faq .section:nth-of-type(1) {
+    padding: 40px 0 0 0;
+    margin-bottom: 100px;
+  }
 }
 @media (min-width: 992px) {
   .view--homepage .section:nth-of-type(1) {
@@ -2027,6 +2066,37 @@ table {
   .view--platform .section:nth-of-type(2) {
     margin-bottom: 160px;
   }
+  .view--platform .section:nth-of-type(3) {
+    margin-bottom: 160px;
+  }
+  .view--accounts .section:nth-of-type(1) {
+    padding: 40px 0 0 0;
+    margin-bottom: 60px;
+  }
+  .view--accounts .section:nth-of-type(2) {
+    margin-bottom: 160px;
+  }
+  .view--about .section:nth-of-type(1) {
+    padding: 40px 0 0 0;
+    margin-bottom: 90px;
+  }
+  .view--about .section:nth-of-type(2) {
+    margin-bottom: 160px;
+  }
+  .view--about .section:nth-of-type(3) {
+    margin-bottom: 120px;
+  }
+  .view--security .section:nth-of-type(1) {
+    padding: 40px 0 0 0;
+    margin-bottom: 160px;
+  }
+  .view--security .section:nth-of-type(2) {
+    margin-bottom: 160px;
+  }
+  .view--faq .section:nth-of-type(1) {
+    padding: 40px 0 0 0;
+    margin-bottom: 160px;
+  }
 }
 @media (min-width: 0) {
   .img img, .ico img {
@@ -2050,6 +2120,18 @@ table {
   }
   .img-dw-1man {
     max-width: 648px;
+  }
+  .img-about-2ppl {
+    max-width: 536px;
+  }
+  .img-about-phone {
+    max-width: 428px;
+  }
+  .img-security-2folders {
+    max-width: 648px;
+  }
+  .img-security-1man {
+    max-width: 560px;
   }
   .img-logo-footer {
     max-width: 160px;
@@ -2081,6 +2163,11 @@ table {
   .box-border {
     border-radius: 24px;
     padding: 24px;
+  }
+  .box-border-white {
+    padding-top: 40px;
+    border: 1px solid #e2e3e4;
+    background: #FFFFFF;
   }
   .box-border-award {
     position: relative;
@@ -2131,9 +2218,109 @@ table {
     padding-bottom: 0;
     background: #f2f2f3;
   }
+  .box-bg-dblue {
+    border-radius: 36px;
+    height: 100%;
+    background: #0c0d29;
+  }
+  .box-bg-dblue p, .box-bg-dblue h1, .box-bg-dblue h2, .box-bg-dblue h3, .box-bg-dblue h4 {
+    color: #FFFFFF;
+  }
+  .hr-gray {
+    width: 96%;
+    margin-top: 24px;
+    margin-bottom: 28px;
+    border: 1px #e2e3e4 solid;
+    background: #e2e3e4;
+  }
+  .hr-white {
+    width: 96%;
+    margin-top: 24px;
+    margin-bottom: 28px;
+    border: 0px none solid;
+    background: #FFFFFF;
+  }
 }
 @media (min-width: 992px) {
   .box-bg-gray {
     padding-bottom: 0;
+  }
+}
+@media (min-width: 0) {
+  .accordeon__item {
+    min-height: 120px;
+    position: relative;
+    border: none;
+    border-bottom: 2px solid #ededee;
+    cursor: pointer;
+  }
+  .accordeon__item > a {
+    text-decoration: none;
+  }
+  .accordeon__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px 20px 54px;
+    width: 100%;
+    min-height: 120px;
+  }
+  .accordeon__header::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: url("../../../../../public/img/icons/ico-accordeon-arrow.svg") no-repeat;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+    transform: rotate(180deg);
+  }
+  .accordeon__header.active ~ .accordeon__content p {
+    transition-delay: 3s;
+    opacity: 1;
+    transition: 3s all ease-in-out;
+    visibility: visible;
+  }
+  .accordeon__header.active::before {
+    transform: rotate(0deg);
+  }
+  .accordeon__content {
+    padding: 0px 40px 20px 54px;
+    display: none;
+    cursor: default;
+  }
+  .accordeon__content p {
+    transition: 0.2s all ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .accordeon__content a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .accordeon__content a:hover {
+    text-decoration: underline;
+  }
+  .accordeon ul {
+    padding-left: 30px;
+    list-style: none;
+  }
+  .accordeon ul li {
+    position: relative;
+  }
+  .accordeon ul li:before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    top: 8px;
+    left: -28px;
+    background: #aeafb2;
+    border-radius: 50%;
+  }
+  .accordeon ol {
+    padding-left: 30px;
+    list-style: decimal;
   }
 }

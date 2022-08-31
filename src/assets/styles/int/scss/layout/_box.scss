@@ -7,6 +7,11 @@
     &-border {
       border-radius: 24px;
       padding: 24px;
+      &-white {
+        padding-top: 40px;
+        border: 1px solid lighten(map-get($bc , 'gray' ), 20%);
+        background: $w;
+      }
       &-award {
         position: relative;
         border: 2px solid map-get($bc , 'lgreen' );
@@ -57,8 +62,32 @@
         height: 100%;
         padding-bottom: 0;
         background: lighten(map-get($bc, 'gray' ), 26%);
+        
+      }
+      &-dblue{
+        border-radius: 36px;
+        height: 100%;
+        background: map-get($bc,'dblue' );
+        p, h1, h2, h3, h4 {
+          color: $w;
+        }
+        
       }
     }
+  }
+  .hr-gray {
+    width: 96%;
+    margin-top: 24px;
+    margin-bottom: 28px;
+    border: 1px lighten(map-get($bc, 'gray' ), 20%) solid;
+    background: lighten(map-get($bc, 'gray' ), 20%);
+  }
+  .hr-white {
+    width: 96%;
+    margin-top: 24px;
+    margin-bottom: 28px;
+    border: 0px none solid;
+    background: $w;
   }
 }
 @media (min-width: $s-sm) {}

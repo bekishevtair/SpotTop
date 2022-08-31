@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="ico-accordeon-arrow" transform="translate(296 498) rotate(180)">
+    <path id="Контур_198" data-name="Контур 198" d="M20,0A20,20,0,1,1,0,20,20,20,0,0,1,20,0Z" transform="translate(256 458)" fill="#e8f9f1"/>
+    <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M16.233,19.268l7.594-7.6a1.429,1.429,0,0,1,2.027,0,1.447,1.447,0,0,1,0,2.033l-8.6,8.611a1.433,1.433,0,0,1-1.979.042L6.606,13.707a1.435,1.435,0,1,1,2.027-2.033Z" transform="translate(259.771 462.012)" fill="#9dedc6"/>
+  </g>
+</svg>

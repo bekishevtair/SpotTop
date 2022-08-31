@@ -19,9 +19,16 @@
       background: map-get($bc, 'yellow' );
       color: map-get($bc, 'dblue' );
     }
+    &-gray {
+      background: lighten(map-get($bc, 'gray' ), 20%);
+      color: map-get($bc, 'dblue' );
+    }
     &-border {
       border: 2px solid map-get($bc, 'gray' );
       color: map-get($bc, 'dblue' );
+      &-yellow {
+        border: 2px solid map-get($bc, 'yellow' );
+      }
     }
     &-light {
       background: map-get($bc, 'light' );
