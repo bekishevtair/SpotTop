@@ -23,6 +23,9 @@
       border: 2px solid map-get($bc, 'gray' );
       color: map-get($bc, 'dblue' );
     }
+    &-light {
+      background: map-get($bc, 'light' );
+    }
   }
 }
 $btn-scales-options: (

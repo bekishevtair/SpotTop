@@ -25,6 +25,11 @@
         max-width: 392px;
       }
     }
+    &-dw {
+      &-1man {
+        max-width: 648px;
+      }
+    }
     &-logo {
       &-footer {
         max-width: 160px;
@@ -34,10 +39,12 @@
   .ico {
     &-circle {
       &-w40 {
-        width: 40px;
+        min-width: 40px;
+        max-width: 40px;
       }
       &-w60 {
-        width: 60px;
+        min-width: 60px;
+        max-width: 60px;
       }
     }
   }
