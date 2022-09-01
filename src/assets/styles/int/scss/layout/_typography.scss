@@ -11,6 +11,18 @@
   .txt {
     line-height: 1.4em;
   }
+  .link {
+    transition: .2s;
+    &-footer {
+      text-decoration: underline;
+      &:hover {
+        color: map-get($bc, 'yellow' );
+      }
+    }
+    &-none {
+      text-decoration: none;
+    }
+  }
   .tit, .txt, .src {
     &.lh {
       &-1 { // or use (ex.) &-125 {}

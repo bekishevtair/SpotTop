@@ -63,6 +63,29 @@
         max-width: 60px;
       }
     }
+    &-social {
+      transition: .1s all ease-in-out;
+      background: map-get($bc, 'lblue' );
+      height: 24px;
+      &:hover {
+        background: map-get($bc, 'yellow' );
+      }
+      &-telegram {
+        width: 24px;
+        -webkit-mask: url('../../../../../public/img/icons/ico-telegram.svg') no-repeat center;
+        mask: url('../../../../../public/img/icons/ico-telegram.svg') no-repeat center;
+      }
+      &-instagram {
+        width: 24px;
+        -webkit-mask: url('../../../../../public/img/icons/ico-inst.svg') no-repeat center;
+        mask: url('../../../../../public/img/icons/ico-inst.svg') no-repeat center;
+      }
+      &-zalo {
+        width: 68px;
+        -webkit-mask: url('../../../../../public/img/icons/ico-zalo.svg') no-repeat center;
+        mask: url('../../../../../public/img/icons/ico-zalo.svg') no-repeat center;
+      }
+    }
   }
 }
 @media (min-width: $s-sm) {}

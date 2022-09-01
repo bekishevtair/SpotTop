@@ -26,6 +26,12 @@
 
   <script src="../assets/scripts/ext/jquery/jquery-3.6.0.min.js"></script>
   <script src="../assets/scripts/int/script.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script>
+    // init controller
+    var controller = new ScrollMagic.Controller();
+  </script>
 </head>
 <body>
   <div style="display: none !important;">
@@ -70,17 +76,19 @@
       </div>
     </section>
     <section class="section" id="sec-03">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <h3 class="tit ts-30 ts-lg-44 tc-dblue tw-700 mb-3">
-              The most reputable crypto exchange
-            </h3>
-            <p class="txt ts-18 ts-lg-24 tc-gray tw-400 mb-5">
-              SpotTop is a go-to option not only for beginners but seasoned traders looking to get exposure to the markets.
-            </p>
+      <div class="container d-none d-lg-flex" id="trigger1">
+        <div class="row" >
+          <div class="col-12 col-lg-5 ps-3 d-none d-lg-block" id="pin1">
+            <div id="pin">
+              <h3 class="tit ts-30 ts-lg-44 tc-dblue tw-700 mb-3" >
+                The most reputable crypto exchange
+              </h3>
+              <p class="txt ts-18 ts-lg-24 tc-gray tw-400 mb-5">
+                SpotTop is a go-to option not only for beginners but seasoned traders looking to get exposure to the markets.
+              </p>
+            </div>
           </div>
-          <div class="col-12 col-lg-6">
+          <div class="col-12 col-lg-6 offset-lg-1">
             <div class="row mb-lg-5 mb-3">
               <div class="col-12 col-sm-6">
                 <h4 class="tit ts-24 ts-lg-28 tc-dblue tw-700 mb-3"> 
@@ -106,8 +114,10 @@
                 </p>
               </div>
               <div class="col-12 col-sm-6">
-                <div class="img img-hp-cards">
-                  <img src="../public/img/ui/img-hp-code.png" alt="">
+                <div class="d-flex justify-content-center">
+                  <div class="img img-hp-cards">
+                    <img src="../public/img/ui/img-hp-code.png" alt="">
+                  </div>
                 </div>
               </div>
             </div>
@@ -123,6 +133,72 @@
               <div class="col-12 col-sm-6">
                 <div class="img img-hp-cards">
                   <img src="../public/img/ui/img-hp-mobile-app.png" alt="">
+                </div>
+              </div>
+            </div>
+              
+          </div>
+        </div>
+      </div>
+      <div class="container d-lg-none d-flex">
+        <div class="row" >
+          <div class="col-12 col-lg-5 ps-3">
+              <h3 class="tit ts-30 ts-lg-44 tc-dblue tw-700 mb-3" >
+                The most reputable crypto exchange
+              </h3>
+              <p class="txt ts-18 ts-lg-24 tc-gray tw-400 mb-5">
+                SpotTop is a go-to option not only for beginners but seasoned traders looking to get exposure to the markets.
+              </p>
+          </div>
+          <div class="col-12 col-lg-6 offset-lg-1">
+            <div class="row mb-lg-5 mb-3">
+              <div class="col-12 col-sm-6">
+                <h4 class="tit ts-24 ts-lg-28 tc-dblue tw-700 mb-3"> 
+                  Intuitive Management of Your Crypto
+                </h4>
+                <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
+                  Our platform provides a one-stop-shop for buying, selling, and monitoring your digital assets with a truly user-friendly interface.  
+                </p>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="d-flex justify-content-center">
+                  <div class="img img-hp-cards">
+                    <img src="../public/img/ui/img-hp-credit-card.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-lg-5 mb-3">
+              <div class="col-12 col-sm-6">
+                <h4 class="tit ts-24 ts-lg-28 tc-dblue tw-700 mb-3"> 
+                  Intuitive Management of Your Crypto
+                </h4>
+                <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
+                  Our platform provides a one-stop-shop for buying, selling, and monitoring your digital assets with a truly user-friendly interface.  
+                </p>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="d-flex justify-content-center">
+                  <div class="img img-hp-cards">
+                    <img src="../public/img/ui/img-hp-code.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <h4 class="tit ts-24 ts-lg-28 tc-dblue tw-700 mb-3"> 
+                  Intuitive Management of Your Crypto
+                </h4>
+                <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
+                  Our platform provides a one-stop-shop for buying, selling, and monitoring your digital assets with a truly user-friendly interface.  
+                </p>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="d-flex justify-content-center">
+                  <div class="img img-hp-cards">
+                    <img src="../public/img/ui/img-hp-mobile-app.png" alt="">
+                  </div>
                 </div>
               </div>
             </div>
@@ -177,7 +253,7 @@
         </div>
       </div>
     </section>
-    <section class="section" id="sec-01">
+    <section class="section" id="sec-05">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-9">
@@ -248,107 +324,8 @@
     <section class="js-import" data-import="form">
     </section> 
   </main>
-  <footer class="js-impor footer" data-import="footer">
-    <div class="container">
-      <div class="row mb-4">
-        <div class="img img-logo-footer">
-          <img src="../public/img/logo/logo-light.svg" alt="">
-        </div>
-      </div>
-      <div class="row mb-5">
-        <div class="col-12 col-md-5 col-lg-3">
-          <div class="wrapper d-flex align-items-start flex-column justify-content-between">
-            <p class="txt ts-16 ts-lg-18 tc-lblue tw-500 mb-2">
-              SpotTop is marketed and operated by ACE HOLDINGS LIMITED with authorization number 13403160.
-            </p>
-            <div class="d-flex flex-row mb-4">
-              <a href="" target="_blank" class="ico ico-social ico-social-telegram me-4">
-                <img src="../public/img/icons/ico-telegram.svg" alt="">
-              </a>
-              <a href="" target="_blank" class="ico ico-social ico-social-instagram me-4">
-                <img src="../public/img/icons/ico-inst.svg" alt="">
-              </a>
-              <a href="" target="_blank" class="ico ico-social ico-social-telegram">
-                <img src="../public/img/icons/ico-zalo.svg" alt="">
-              </a>
-            </div>
-            <div class="d-flex flex-column flex-sm-row">
-              <a href="" class="link link-footer txt ts-16 tc-lgray tw-500 me-4">
-                Terms & Conditions
-              </a>
-              <a href="" class="link link-footer txt ts-16 tc-lgray tw-500">
-                Privacy Policy
-              </a>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-12 col-md-5 col-lg-5 offset-md-2 offset-lg-4">
-          <h5 class="tit ts-16 ts-lg-18 tc-white tw-700 mb-4">
-            Quick Links
-          </h5>
-          <div class="wrapper d-flex flex-column flex-sm-row">
-            <div class="col-12 col-sm-6">
-              <div class="wrapper d-flex flex-column">
-                <a href="" class="txt ts-16 tc-lblue tw-500 mb-3">
-                  Crypto
-                </a>
-                <a href="" class="txt ts-16 tc-lblue tw-500 mb-3">
-                  Discover Crypto
-                </a>
-                <a href="" class="txt ts-16 tc-lblue tw-500 mb-3">
-                  Deposit & Withdrawal
-                </a>
-                <a href="" class="txt ts-16 tc-lblue tw-500 mb-3">
-                  Prices
-                </a>
-                <a href="" class="txt ts-16 tc-lblue tw-500 mb-3">
-                  Platform
-                </a>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6">
-              <div class="wrapper d-flex flex-column">
-                <a href="" class="txt ts-16 tc-lblue tw-500 mb-3">
-                  Accounts
-                </a>
-                <a href="" class="txt ts-16 tc-lblue tw-500 mb-3">
-                  About Us
-                </a>
-                <a href="" class="txt ts-16 tc-lblue tw-500 mb-3">
-                  Security
-                </a>
-                <a href="" class="txt ts-16 tc-lblue tw-500 mb-3">
-                  FAQ
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          <p class="txt ts-lg-16 tc-lblue tw-300 mb-4">
-            <span class="txt tw-700 tc-white">
-              Risk Warning:
-            </span>
-             Cryptocurrencies are influenced products. SpotTop associated with foreign exchange, leveraged trading, common assets and other underlying variables, involves a high level of risk and a possibility of loss of some or all of your investment. Please consider carefully whether trading or investing cryptocurrencies is appropriate to your financial situation. Only risk capital should be used when trading or investing.
-          </p>
-        </div>
-        <div class="col-12 col-lg-6">
-          <p class="txt ts-lg-16 tc-lblue tw-300 mb-4">
-            <span class="txt tc-white tw-700">
-              Restricted Jurisdictions: 
-            </span>
-            We do not establish accounts to residents of certain jurisdictions including USA. For further details please see Terms & Conditions.
-          </p>
-        </div>
-      </div>
-      <p class="txt ts-lg-16 tc-lblue tw-300">
-        Copyright © 2022 SpotTop. All rights reserved.
-      </p>
-    </div>
-    
+  <footer class="js-import footer" data-import="footer">
   </footer>
+  <script src="../assets/scripts/int/scrolling.js"></script>
 </body>
 </html>

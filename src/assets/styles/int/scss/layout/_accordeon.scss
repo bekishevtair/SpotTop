@@ -15,7 +15,7 @@
       position: relative;
       display: flex;
       align-items: center;
-      padding: 20px 40px 20px 54px;
+      padding: 20px 30px 20px 60px;
       width: 100%;
       min-height: 120px;
       &::before {
@@ -46,7 +46,7 @@
       
     }
     &__content {
-      padding: 0px 40px 20px 54px;
+      padding: 0px 40px 20px 60px;
       display: none;
       cursor: default;
       p {
@@ -55,8 +55,7 @@
         visibility: hidden;
       }
       a {
-        text-decoration: none;
-        color: inherit;
+        color: map-get($bc, 'yellow' );
         &:hover {
           text-decoration: underline;
         }

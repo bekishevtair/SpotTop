@@ -32,6 +32,7 @@
     }
     &-light {
       background: map-get($bc, 'light' );
+      color: map-get($bc, 'dblue' );
     }
   }
 }
