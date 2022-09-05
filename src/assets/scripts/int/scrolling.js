@@ -59,11 +59,11 @@ function scrollToSection () {
 // PIN WHILE SCROLLING
 $(function () {
     // build scene
-    const sectionHeight = $('#sec-03').height();
-    const pinHeight = $('#pin').height();
+    const sectionHeight = $('#sec-pin').height();
+    const pinHeight = $('.pin').height();
     var scene = new ScrollMagic.Scene({
       triggerElement: "#trigger1", 
-      duration: sectionHeight - pinHeight - 40,
+      duration: sectionHeight - 300,
       triggerHook: 0.4
     })
     .setPin("#pin1")

@@ -26,6 +26,12 @@
 
   <script src="../../assets/scripts/ext/jquery/jquery-3.6.0.min.js"></script>
   <script src="../../assets/scripts/int/script.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script>
+    // init controller
+    var controller = new ScrollMagic.Controller();
+  </script>
 </head>
 </head>
 <body>
@@ -61,8 +67,93 @@
         </div>
       </div>
     </section>
-    <section class="section" id="sec-02">
-      <div class="container">
+    <section class="section" id="sec-pin">
+      <div class="container d-none d-lg-block" id="trigger1">
+        <div class="row mb-5">
+          <div class="col-12 col-lg-5  ps-3" id="pin1">
+            <div class="pin">
+              <h3 class="tit ts-30 ts-lg-44 tc-dblue tw-700 mb-3">
+                Features
+              </h3>
+              <p class="txt ts-18 ts-lg-24 tc-gray tw-400 mb-5">
+                What makes DXtrade different:
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 offset-lg-1">
+            <div class="row mb-lg-5 mb-3">
+              <div class="col-12 col-sm-6">
+                <h4 class="tit ts-24 ts-lg-28 tc-dblue tw-700 mb-3"> 
+                  State-Of-The-Art Charting Options
+                </h4>
+                <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
+                  We provide trading indicators used by professional day traders allowing you to perform multi-timeframe technical analysis on our widget-based interface.
+                </p>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="img img-hp-cards">
+                  <img src="../../public/img/ui/img-platform-1.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-lg-5 mb-3">
+              <div class="col-12 col-sm-6">
+                <h4 class="tit ts-24 ts-lg-28 tc-dblue tw-700 mb-3"> 
+                  Customizable
+                </h4>
+                <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
+                  Traders have the ability to customize their workspace and widgets. You’ll have the option to fully tailor your trading experience using our Popout feature which adapts to your specific style.
+                </p>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="img img-hp-cards">
+                  <img src="../../public/img/ui/img-platform-2.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-lg-5 mb-3">
+              <div class="col-12 col-sm-6">
+                <h4 class="tit ts-24 ts-lg-28 tc-dblue tw-700 mb-3"> 
+                  Account History
+                </h4>
+                <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
+                  DXtrade allows traders  to instantly generate account statements within the platform, allowing them to track account history and activity.
+                </p>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="img img-hp-cards">
+                  <img src="../../public/img/ui/img-platform-3.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <h4 class="tit ts-24 ts-lg-28 tc-dblue tw-700 mb-3"> 
+                  Order Types
+                </h4>
+                <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
+                  Traders can easily place Market, Stop, Limit and OCO orders as well as add Stop Loss or Take Profit to any position or pending order.
+                </p>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="img img-hp-cards">
+                  <img src="../../public/img/ui/img-platform-4.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="wrapper d-flex justify-content-center">
+            <a href="" class="btn btn-yellow btn-w-280 btn-s4 py-3">
+              <span class="txt ts-24">
+                Create Account
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container d-lg-none d-flex">
         <div class="row mb-5">
           <div class="col-12 col-lg-6">
             <h3 class="tit ts-30 ts-lg-44 tc-dblue tw-700 mb-3">
@@ -169,5 +260,6 @@
     </section> 
   </main>
   <footer class="js-import" data-import="footer"></footer>
+  <script src="../../assets/scripts/int/scrolling.js"></script>
 </body>
 </html>
