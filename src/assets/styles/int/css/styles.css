@@ -2202,28 +2202,25 @@ table {
   .calc__input-item-field select option {
     color: #000000;
   }
-  .convert-btn {
-    text-align: center;
-    margin: 1rem;
-  }
-  .convert-btn input {
-    width: 5rem;
-    height: 2rem;
-    font-size: 1.2rem;
-    background: green;
-    color: #fff;
-    border: none;
-    outline: none;
-    border-radius: 0.2rem;
-  }
-  .convert-btn input:hover {
-    cursor: pointer;
-    background: greenyellow;
-  }
   .display-result {
     text-align: center;
     color: rgb(0, 0, 0);
     padding: 1rem;
+  }
+  .crypto__widget {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 30px;
+    border-radius: 36px;
+    background: #FFFFFF;
+    border: 2px solid #e2e3e4;
+    margin-bottom: 14px;
+  }
+  .crypto__widget-ico img {
+    display: block;
+    min-width: 54px;
+    margin-right: 20px;
   }
 }
 @media (min-width: 0) {
