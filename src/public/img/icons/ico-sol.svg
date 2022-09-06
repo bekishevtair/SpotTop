@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ico-sol" transform="translate(-7 -7)">
+    <circle id="Эллипс_25" data-name="Эллипс 25" cx="12" cy="12" r="12" transform="translate(7 7)"/>
+    <path id="Контур_571" data-name="Контур 571" d="M31.44,38H20.4L18,40.88H29.04Z" transform="translate(-5.72 -16.12)" fill="#424ede"/>
+    <path id="Контур_572" data-name="Контур 572" d="M31.44,31.88,29.04,29H18l2.4,2.88Z" transform="translate(-5.72 -11.44)" fill="#2488ff"/>
+    <path id="Контур_573" data-name="Контур 573" d="M31.44,20H20.4L18,22.88H29.04Z" transform="translate(-5.72 -6.76)" fill="#00ddc2"/>
+  </g>
+</svg>

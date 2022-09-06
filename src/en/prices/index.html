@@ -55,14 +55,16 @@
           </div>
           <div class="col-12 col-lg-6 offset-lg-1">
             <div class="wrapper d-flex align-items-center">
-              <form action="" class="convert" id="calc-from">
-                <div class="calc-box">
-                    <div class="d-flex flex-column flex-md-row">
-                      <div class="calc-input col-12 col-lg-6">
-                        <label for="input-amount">Select currency</label>
-                        <div class="calc-input-item">
-                          <input type="number" step=".0001" name="" id="input-amount" placeholder="Amount">
-                          <select name="currency-from" id="currency-from">
+              <form action="" class="convert" id="calc-form">
+                <div class="calc__box">
+                  <div class="row">
+                    <div class="col-12 col-lg-5">
+                      <div class="calc__input">
+                        <div class="calc__input-item">
+                          <label for="input-amount">Amout</label>
+                          <div class="calc__input-item-field">
+                            <input type="number" step=".01" name="" id="input-amount" placeholder="Amount">
+                            <select name="currency-from" id="currency-from">
                               <option value="AED">AED - Emirati Dirham</option>
                               <option value="AFN">AFN - Afghan Afghani</option>
                               <option value="ALL">ALL - Albanian Lek</option>
@@ -233,15 +235,17 @@
                               <option value="ZAR">ZAR - South African Rand</option>
                               <option value="ZMW">ZMW - Zambian Kwacha</option>
                               <option value="ZWL">ZWL - Zimbabwean Dollar</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="calc-input col-12 col-lg-6">
-                        <label for="currency-to">Result</label>
-                        <div class="calc-input-item">
-                          <div class="display-result">
+                            </select>
                           </div>
-                          <select name="currency-to" id="currency-to">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-5 offset-lg-2">
+                      <div class="calc__input">
+                        <div class="calc__input-item">
+                          <label for="">To</label>
+                          <div class="calc__input-item-field">
+                            <select name="currency-to" id="currency-to">
                               <option value="AED">AED - Emirati Dirham</option>
                               <option value="AFN">AFN - Afghan Afghani</option>
                               <option value="ALL">ALL - Albanian Lek</option>
@@ -412,19 +416,17 @@
                               <option value="ZAR">ZAR - South African Rand</option>
                               <option value="ZMW">ZMW - Zambian Kwacha</option>
                               <option value="ZWL">ZWL - Zimbabwean Dollar</option>
-                          </select>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    
-                    <div class="convert-btn">
-                        <input type="submit" value="Convert" id="convert-btn">
-                    </div>
-                    <div class="display-result">
-
-                    </div>
+                  </div>
+                </div>
+                <div class="display-result">
                 </div>
             </form>
+         
 
               <!-- <p class="txt ts-30 tc-dblue tw-700 ta-center">
                 - - HERE WILL BE CRYPTOCALC - -

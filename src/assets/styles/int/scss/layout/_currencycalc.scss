@@ -1,74 +1,51 @@
 @media (min-width: $s-xs) {
+  .container-head{
+    text-align: center;
+    h3{
+        color: #fff;
+    }
+}
+
 .calc {
-  &-input {
+  &__box{
+    color: #fff !important;
     display: flex;
-    flex-direction: column;
-    &-item {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 18px;
-      border: 2px solid map-get($bc, 'lblue' );
-      border-radius: 8px;
-      input{
-        color: $w;
-        width: 73%;
-        background: transparent;
-        height: 100%;
-        border: none;
-        border-right: 2px solid map-get($bc, 'lblue' );
-        outline: none;
-        font-size: 18px;
-      }
-      select{
-        width: 27%;
-        background: transparent;
-        color: $w;
-        border: none;
-        outline: none;
-        height: 2rem;
-        font-size: 18px;
-        option {
-            color: black;
-        }
-      }
-    }
-    label {
-      margin-bottom: 12px;
-      color: map-get($bc, 'lblue' );
-    }
-  }
-  &-row {
-    display: flex;
-    flex-direction: row;
-  }
-  &-box{
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 40px;
     border-radius: 36px;
     background: map-get($bc, 'dblue' );
-    color: $w !important;
-    input{
-        color: $w;
+  }
+  &__input {
+    &-item {
+      &-field {
+        display: flex;
+        flex-direction: row;
+        margin-top: 14px;
         background: transparent;
-        height: 1.7rem;
-        border-radius: .2rem;
-        border: none;
-        outline: none;
-        font-size: 1.2rem;
-    }
-    select{
-        background: transparent;
-        color: $w;
-        border: none;
-        outline: none;
-        border-radius: .2rem;
-        height: 2rem;
-        font-size: 1.2rem;
-        option {
-            color: black;
+        border-radius: 8px;
+        border: 2px solid map-get($bc, 'lblue' );
+        input, select {
+          background: transparent;
+          padding: 14px;
+          color: $w;
+          outline: none;
+          border: none;
         }
+        input {
+          width: 60%;
+        }
+        select {
+          width: 40%;
+          option {
+            color: $b;
+          }
+        }
+      }
     }
   }
+
+ 
 }
 .convert-btn{
     text-align: center;
@@ -77,8 +54,7 @@
         width: 5rem;
         height: 2rem;
         font-size: 1.2rem;
-        background: green; 
-        color:$w ;
+        background: green; color: #fff;
         border: none; outline: none; border-radius: .2rem;
         &:hover{
             cursor: pointer;
@@ -88,10 +64,9 @@
 }
 .display-result{
     text-align: center;
-    color: $w;
+    color: rgb(0, 0, 0);
     padding: 1rem;
 }
-  
 }
 @media (min-width: $s-sm) {
 }

@@ -2163,74 +2163,44 @@ table {
   }
 }
 @media (min-width: 0) {
-  .calc-input {
+  .container-head {
+    text-align: center;
+  }
+  .container-head h3 {
+    color: #fff;
+  }
+  .calc__box {
+    color: #fff !important;
     display: flex;
-    flex-direction: column;
-  }
-  .calc-input-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 18px;
-    border: 2px solid #7d7e90;
-    border-radius: 8px;
-  }
-  .calc-input-item input {
-    color: #FFFFFF;
-    width: 73%;
-    background: transparent;
-    height: 100%;
-    border: none;
-    border-right: 2px solid #7d7e90;
-    outline: none;
-    font-size: 18px;
-  }
-  .calc-input-item select {
-    width: 27%;
-    background: transparent;
-    color: #FFFFFF;
-    border: none;
-    outline: none;
-    height: 2rem;
-    font-size: 18px;
-  }
-  .calc-input-item select option {
-    color: black;
-  }
-  .calc-input label {
-    margin-bottom: 12px;
-    color: #7d7e90;
-  }
-  .calc-row {
-    display: flex;
-    flex-direction: row;
-  }
-  .calc-box {
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 40px;
     border-radius: 36px;
     background: #0c0d29;
-    color: #FFFFFF !important;
   }
-  .calc-box input {
-    color: #FFFFFF;
+  .calc__input-item-field {
+    display: flex;
+    flex-direction: row;
+    margin-top: 14px;
     background: transparent;
-    height: 1.7rem;
-    border-radius: 0.2rem;
-    border: none;
-    outline: none;
-    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 2px solid #7d7e90;
   }
-  .calc-box select {
+  .calc__input-item-field input, .calc__input-item-field select {
     background: transparent;
+    padding: 14px;
     color: #FFFFFF;
-    border: none;
     outline: none;
-    border-radius: 0.2rem;
-    height: 2rem;
-    font-size: 1.2rem;
+    border: none;
   }
-  .calc-box select option {
-    color: black;
+  .calc__input-item-field input {
+    width: 60%;
+  }
+  .calc__input-item-field select {
+    width: 40%;
+  }
+  .calc__input-item-field select option {
+    color: #000000;
   }
   .convert-btn {
     text-align: center;
@@ -2241,7 +2211,7 @@ table {
     height: 2rem;
     font-size: 1.2rem;
     background: green;
-    color: #FFFFFF;
+    color: #fff;
     border: none;
     outline: none;
     border-radius: 0.2rem;
@@ -2252,7 +2222,7 @@ table {
   }
   .display-result {
     text-align: center;
-    color: #FFFFFF;
+    color: rgb(0, 0, 0);
     padding: 1rem;
   }
 }
