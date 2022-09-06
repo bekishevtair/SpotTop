@@ -1,0 +1,101 @@
+@media (min-width: $s-xs) {
+.calc {
+  &-input {
+    display: flex;
+    flex-direction: column;
+    &-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 18px;
+      border: 2px solid map-get($bc, 'lblue' );
+      border-radius: 8px;
+      input{
+        color: $w;
+        width: 73%;
+        background: transparent;
+        height: 100%;
+        border: none;
+        border-right: 2px solid map-get($bc, 'lblue' );
+        outline: none;
+        font-size: 18px;
+      }
+      select{
+        width: 27%;
+        background: transparent;
+        color: $w;
+        border: none;
+        outline: none;
+        height: 2rem;
+        font-size: 18px;
+        option {
+            color: black;
+        }
+      }
+    }
+    label {
+      margin-bottom: 12px;
+      color: map-get($bc, 'lblue' );
+    }
+  }
+  &-row {
+    display: flex;
+    flex-direction: row;
+  }
+  &-box{
+    padding: 40px;
+    border-radius: 36px;
+    background: map-get($bc, 'dblue' );
+    color: $w !important;
+    input{
+        color: $w;
+        background: transparent;
+        height: 1.7rem;
+        border-radius: .2rem;
+        border: none;
+        outline: none;
+        font-size: 1.2rem;
+    }
+    select{
+        background: transparent;
+        color: $w;
+        border: none;
+        outline: none;
+        border-radius: .2rem;
+        height: 2rem;
+        font-size: 1.2rem;
+        option {
+            color: black;
+        }
+    }
+  }
+}
+.convert-btn{
+    text-align: center;
+    margin: 1rem;
+    input{
+        width: 5rem;
+        height: 2rem;
+        font-size: 1.2rem;
+        background: green; 
+        color:$w ;
+        border: none; outline: none; border-radius: .2rem;
+        &:hover{
+            cursor: pointer;
+            background: greenyellow;
+        }
+    }
+}
+.display-result{
+    text-align: center;
+    color: $w;
+    padding: 1rem;
+}
+  
+}
+@media (min-width: $s-sm) {
+}
+@media (min-width: $s-md) {}
+@media (min-width: $s-lg) {}
+@media (min-width: $s-xl) {}
+@media (min-width: $s-xxl) {}

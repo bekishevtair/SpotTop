@@ -1581,20 +1581,37 @@ table {
     background: #f6d25d;
     color: #0c0d29;
   }
+  .btn-yellow:hover {
+    background: #f29d3e;
+  }
   .btn-gray {
     background: #e2e3e4;
     color: #0c0d29;
+  }
+  .btn-gray:hover {
+    background: #aeafb2;
   }
   .btn-border {
     border: 2px solid #aeafb2;
     color: #0c0d29;
   }
+  .btn-border:hover {
+    border: 2px solid #e2e3e4;
+    background: #e2e3e4;
+  }
   .btn-border-yellow {
     border: 2px solid #f6d25d;
+  }
+  .btn-border-yellow:hover {
+    border: 2px solid #f6d25d;
+    background: #f6d25d;
   }
   .btn-light {
     background: #FBFBFC;
     color: #0c0d29;
+  }
+  .btn-light:hover {
+    color: #f29d3e;
   }
 }
 @media (min-width: 0) {
@@ -1979,28 +1996,27 @@ table {
   .view .section:nth-of-type(1) {
     padding: 40px 0 0 0;
   }
-  .view .section-form {
-    padding: 70px 0 90px 0;
-    background: #0c0d29;
-  }
   .view--homepage .section:nth-of-type(1) {
-    margin-bottom: 80px;
+    padding-bottom: 80px;
   }
   .view--homepage .section:nth-of-type(2) {
-    margin-bottom: 120px;
+    padding-bottom: 120px;
   }
   .view--homepage .section:nth-of-type(3) {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
   }
   .view--homepage .section:nth-of-type(4) {
-    margin-bottom: 80px;
+    padding-bottom: 80px;
   }
   .view--homepage .section:nth-of-type(5) {
+    padding-bottom: 80px;
+  }
+  .view--homepage .section:nth-of-type(6) {
     padding: 80px 0 60px 0;
     background: #0c0d29;
   }
   .view--discover-crypto .section:nth-of-type(1), .view--discover-crypto .section:nth-of-type(2), .view--discover-crypto .section:nth-of-type(3), .view--deposit .section:nth-of-type(1), .view--deposit .section:nth-of-type(2), .view--deposit .section:nth-of-type(3), .view--platform .section:nth-of-type(1), .view--platform .section:nth-of-type(2), .view--platform .section:nth-of-type(3), .view--accounts .section:nth-of-type(1), .view--accounts .section:nth-of-type(2), .view--accounts .section:nth-of-type(3), .view--about .section:nth-of-type(1), .view--about .section:nth-of-type(2), .view--about .section:nth-of-type(3), .view--security .section:nth-of-type(1), .view--security .section:nth-of-type(2), .view--security .section:nth-of-type(3), .view--faq .section:nth-of-type(1), .view--faq .section:nth-of-type(2), .view--faq .section:nth-of-type(3) {
-    margin-bottom: 80px;
+    padding-bottom: 80px;
   }
   .scrollmagic-pin-spacer {
     box-sizing: border-box !important;
@@ -2012,45 +2028,48 @@ table {
 }
 @media (min-width: 992px) {
   .view--homepage .section:nth-of-type(1) {
-    margin-bottom: 220px;
+    padding-bottom: 220px;
   }
   .view--homepage .section:nth-of-type(2) {
-    margin-bottom: 200px;
+    padding-bottom: 200px;
   }
   .view--homepage .section:nth-of-type(3) {
-    margin-bottom: 150px;
+    padding-bottom: 150px;
   }
   .view--homepage .section:nth-of-type(4) {
-    margin-bottom: 140px;
+    padding-bottom: 140px;
   }
   .view--homepage .section:nth-of-type(5) {
+    padding-bottom: 140px;
+  }
+  .view--homepage .section:nth-of-type(6) {
     padding-top: 100px;
     padding-bottom: 40px;
     background: #0c0d29;
   }
   .view--discover-crypto .section:nth-of-type(1), .view--deposit .section:nth-of-type(1), .view--prices .section:nth-of-type(1), .view--platform .section:nth-of-type(1), .view--security .section:nth-of-type(1), .view--faq .section:nth-of-type(1) {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
   }
   .view--discover-crypto .section:nth-of-type(2), .view--deposit .section:nth-of-type(2), .view--prices .section:nth-of-type(2), .view--platform .section:nth-of-type(2), .view--security .section:nth-of-type(2), .view--faq .section:nth-of-type(2) {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
   }
   .view--discover-crypto .section:nth-of-type(3), .view--deposit .section:nth-of-type(3), .view--prices .section:nth-of-type(3), .view--platform .section:nth-of-type(3), .view--security .section:nth-of-type(3), .view--faq .section:nth-of-type(3) {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
   }
   .view--accounts .section:nth-of-type(1) {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
   }
   .view--accounts .section:nth-of-type(2) {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
   }
   .view--about .section:nth-of-type(1) {
-    margin-bottom: 90px;
+    padding-bottom: 90px;
   }
   .view--about .section:nth-of-type(2) {
-    margin-bottom: 160px;
+    padding-bottom: 160px;
   }
   .view--about .section:nth-of-type(3) {
-    margin-bottom: 120px;
+    padding-bottom: 120px;
   }
   .scrollmagic-pin-spacer {
     box-sizing: border-box !important;
@@ -2115,18 +2134,18 @@ table {
   }
   .ico-social-telegram {
     width: 24px;
-    -webkit-mask: url("../../../../../public/img/icons/ico-telegram.svg") no-repeat center;
-    mask: url("../../../../../public/img/icons/ico-telegram.svg") no-repeat center;
+    -webkit-mask: url("../../../../public/img/icons/ico-telegram.svg") no-repeat center;
+    mask: url("../../../../public/img/icons/ico-telegram.svg") no-repeat center;
   }
   .ico-social-instagram {
     width: 24px;
-    -webkit-mask: url("../../../../../public/img/icons/ico-inst.svg") no-repeat center;
-    mask: url("../../../../../public/img/icons/ico-inst.svg") no-repeat center;
+    -webkit-mask: url("../../../../public/img/icons/ico-inst.svg") no-repeat center;
+    mask: url("../../../../public/img/icons/ico-inst.svg") no-repeat center;
   }
   .ico-social-zalo {
     width: 68px;
-    -webkit-mask: url("../../../../../public/img/icons/ico-zalo.svg") no-repeat center;
-    mask: url("../../../../../public/img/icons/ico-zalo.svg") no-repeat center;
+    -webkit-mask: url("../../../../public/img/icons/ico-zalo.svg") no-repeat center;
+    mask: url("../../../../public/img/icons/ico-zalo.svg") no-repeat center;
   }
 }
 @media (min-width: 0) {
@@ -2134,9 +2153,107 @@ table {
     padding: 90px 0 60px 0;
     background: #0c0d29;
   }
-  footer .row:nth-child(3) {
+  footer .row:nth-child(4) {
     padding-top: 40px;
     border-top: 2px solid #7d7e90;
+  }
+  footer .row-form {
+    padding: 0 0 180px 0;
+    background: #0c0d29;
+  }
+}
+@media (min-width: 0) {
+  .calc-input {
+    display: flex;
+    flex-direction: column;
+  }
+  .calc-input-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 18px;
+    border: 2px solid #7d7e90;
+    border-radius: 8px;
+  }
+  .calc-input-item input {
+    color: #FFFFFF;
+    width: 73%;
+    background: transparent;
+    height: 100%;
+    border: none;
+    border-right: 2px solid #7d7e90;
+    outline: none;
+    font-size: 18px;
+  }
+  .calc-input-item select {
+    width: 27%;
+    background: transparent;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    height: 2rem;
+    font-size: 18px;
+  }
+  .calc-input-item select option {
+    color: black;
+  }
+  .calc-input label {
+    margin-bottom: 12px;
+    color: #7d7e90;
+  }
+  .calc-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .calc-box {
+    padding: 40px;
+    border-radius: 36px;
+    background: #0c0d29;
+    color: #FFFFFF !important;
+  }
+  .calc-box input {
+    color: #FFFFFF;
+    background: transparent;
+    height: 1.7rem;
+    border-radius: 0.2rem;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+  }
+  .calc-box select {
+    background: transparent;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+  .calc-box select option {
+    color: black;
+  }
+  .convert-btn {
+    text-align: center;
+    margin: 1rem;
+  }
+  .convert-btn input {
+    width: 5rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    background: green;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+  }
+  .convert-btn input:hover {
+    cursor: pointer;
+    background: greenyellow;
+  }
+  .display-result {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 1rem;
   }
 }
 @media (min-width: 0) {
@@ -2169,7 +2286,7 @@ table {
     left: 24px;
     width: 54px;
     height: 54px;
-    background: url("../../../../../public/img/icons/ico-award.svg") center no-repeat;
+    background: url("../../../../public/img/icons/ico-award.svg") center no-repeat;
     z-index: 98;
   }
   .box-border-award::after {
@@ -2253,7 +2370,7 @@ table {
     content: "";
     width: 40px;
     height: 40px;
-    background: url("../../../../../public/img/icons/ico-accordeon-arrow.svg") no-repeat;
+    background: url("../../../../public/img/icons/ico-accordeon-arrow.svg") no-repeat;
     position: absolute;
     top: 40px;
     left: 0;

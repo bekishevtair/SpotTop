@@ -18,21 +18,39 @@
     &-yellow {
       background: map-get($bc, 'yellow' );
       color: map-get($bc, 'dblue' );
+      &:hover {
+        background: map-get($bc, 'orange' );
+      }
     }
     &-gray {
       background: lighten(map-get($bc, 'gray' ), 20%);
       color: map-get($bc, 'dblue' );
+      &:hover {
+        background: map-get($bc, 'gray' );
+      }
     }
     &-border {
       border: 2px solid map-get($bc, 'gray' );
       color: map-get($bc, 'dblue' );
+      &:hover {
+        border: 2px solid lighten(map-get($bc, 'gray' ), 20%);
+        background: lighten(map-get($bc, 'gray' ), 20%);
+      }
       &-yellow {
         border: 2px solid map-get($bc, 'yellow' );
+        &:hover {
+        border: 2px solid map-get($bc, 'yellow' );
+        background: map-get($bc, 'yellow' );
+          
+        }
       }
     }
     &-light {
       background: map-get($bc, 'light' );
       color: map-get($bc, 'dblue' );
+      &:hover {
+        color: map-get($bc, 'orange' );
+      }
     }
   }
 }

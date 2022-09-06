@@ -3,10 +3,14 @@
     padding: 90px 0 60px 0;
     background: map-get($bc,'dblue' );
     .row {
-      &:nth-child(3) {
+      &:nth-child(4) {
       padding-top: 40px;
       border-top: 2px solid map-get($bc, 'lblue');
      }
+     &-form {
+      padding: 0 0 180px 0;
+      background: map-get($bc, 'dblue' );
+      }
     }
   }
 }

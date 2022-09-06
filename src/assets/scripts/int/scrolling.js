@@ -71,11 +71,6 @@ $(function () {
     .addTo(controller);
   });
 
-
-
-
-
-
 //SCROLL ANIMATE 
 
 var ScrollOut = (function () {
