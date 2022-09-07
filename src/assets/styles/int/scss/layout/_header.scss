@@ -20,6 +20,8 @@
       &:nth-of-type(3) {
         display: none;
       }
+      &:last-child {
+      }
     }
     &__logo {
       display: block;
@@ -61,16 +63,16 @@
       &::after,
       &::before {
         content: '';
-        width: 10px;
+        width: 8px;
         height: 2px;
         background: map-get($bc, 'gray' );
         position: absolute;
-        top: 51px;
+        top: 49px;
         transition: all .2s ease-in-out;
       }
       &::before {
         transform: rotate(140deg);
-        right: 14px;
+        right: 15px;
       }
       &::after {
         transform: rotate(40deg);
@@ -83,7 +85,7 @@
           // background: map-get($bc, 'orange' );
         }
         &::after {
-          right: 14px;
+          right: 15px;
 
           // background: map-get($bc, 'orange' );
         }

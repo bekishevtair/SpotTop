@@ -32,56 +32,56 @@ table {
 }
 
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../../../../public/fonts/Cera Pro/Cera Pro-100.ttf");
+  font-family: "Poppins";
+  src: url("../../../../public/fonts/Poppins/Poppins-100.ttf");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../../../../public/fonts/Cera Pro/Cera Pro-200.ttf");
+  font-family: "Poppins";
+  src: url("../../../../public/fonts/Poppins/Poppins-200.ttf");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../../../../public/fonts/Cera Pro/Cera Pro-300.ttf");
+  font-family: "Poppins";
+  src: url("../../../../public/fonts/Poppins/Poppins-300.ttf");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../../../../public/fonts/Cera Pro/Cera Pro-400.ttf");
+  font-family: "Poppins";
+  src: url("../../../../public/fonts/Poppins/Poppins-400.ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../../../../public/fonts/Cera Pro/Cera Pro-500.ttf");
+  font-family: "Poppins";
+  src: url("../../../../public/fonts/Poppins/Poppins-500.ttf");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../../../../public/fonts/Cera Pro/Cera Pro-600.ttf");
+  font-family: "Poppins";
+  src: url("../../../../public/fonts/Poppins/Poppins-600.ttf");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../../../../public/fonts/Cera Pro/Cera Pro-700.ttf");
+  font-family: "Poppins";
+  src: url("../../../../public/fonts/Poppins/Poppins-700.ttf");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../../../../public/fonts/Cera Pro/Cera Pro-800.ttf");
+  font-family: "Poppins";
+  src: url("../../../../public/fonts/Poppins/Poppins-800.ttf");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: "Cera Pro";
-  src: url("../../../../public/fonts/Cera Pro/Cera Pro-900.ttf");
+  font-family: "Poppins";
+  src: url("../../../../public/fonts/Poppins/Poppins-900.ttf");
   font-weight: 900;
   font-style: normal;
 }
@@ -1053,7 +1053,7 @@ table {
 }
 @media (min-width: 0) {
   p, a, b, i, li, ol, ul, h1, h2, h3, h4, h5, h6, span, label, input, textarea, button, table {
-    font-family: "Cera Pro", sans-serif !important;
+    font-family: "Poppins", sans-serif !important;
   }
   .tit {
     line-height: 1.2em;
@@ -1142,16 +1142,16 @@ table {
   }
   .header__exp::after, .header__exp::before {
     content: "";
-    width: 10px;
+    width: 8px;
     height: 2px;
     background: #aeafb2;
     position: absolute;
-    top: 51px;
+    top: 49px;
     transition: all 0.2s ease-in-out;
   }
   .header__exp::before {
     transform: rotate(140deg);
-    right: 14px;
+    right: 15px;
   }
   .header__exp::after {
     transform: rotate(40deg);
@@ -1161,7 +1161,7 @@ table {
     right: 20px;
   }
   .header__exp:hover::after {
-    right: 14px;
+    right: 15px;
   }
   .header__exp-head {
     min-width: fit-content;
@@ -1570,7 +1570,7 @@ table {
     border: 0 solid rgba(0, 0, 0, 0);
     border-radius: 40px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     text-decoration: none;
     transition: all 0.1s ease-in-out;
     outline: none;
