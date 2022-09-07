@@ -1052,8 +1052,8 @@ table {
   }
 }
 @media (min-width: 0) {
-  p, a, b, i, li, ol, ul, h1, h2, h3, h4, h5, h6, span, label, input, textarea, button {
-    font-family: "Cera Pro", sans-serif;
+  p, a, b, i, li, ol, ul, h1, h2, h3, h4, h5, h6, span, label, input, textarea, button, table {
+    font-family: "Cera Pro", sans-serif !important;
   }
   .tit {
     line-height: 1.2em;
@@ -1992,9 +1992,7 @@ table {
   }
   .view {
     background: #FBFBFC;
-  }
-  .view .section:nth-of-type(1) {
-    padding: 40px 0 0 0;
+    padding-top: 80px;
   }
   .view--homepage .section:nth-of-type(1) {
     padding-bottom: 80px;
@@ -2009,14 +2007,17 @@ table {
     padding-bottom: 80px;
   }
   .view--homepage .section:nth-of-type(5) {
-    padding-bottom: 80px;
-  }
-  .view--homepage .section:nth-of-type(6) {
     padding: 80px 0 60px 0;
     background: #0c0d29;
   }
-  .view--discover-crypto .section:nth-of-type(1), .view--discover-crypto .section:nth-of-type(2), .view--discover-crypto .section:nth-of-type(3), .view--deposit .section:nth-of-type(1), .view--deposit .section:nth-of-type(2), .view--deposit .section:nth-of-type(3), .view--platform .section:nth-of-type(1), .view--platform .section:nth-of-type(2), .view--platform .section:nth-of-type(3), .view--accounts .section:nth-of-type(1), .view--accounts .section:nth-of-type(2), .view--accounts .section:nth-of-type(3), .view--about .section:nth-of-type(1), .view--about .section:nth-of-type(2), .view--about .section:nth-of-type(3), .view--security .section:nth-of-type(1), .view--security .section:nth-of-type(2), .view--security .section:nth-of-type(3), .view--faq .section:nth-of-type(1), .view--faq .section:nth-of-type(2), .view--faq .section:nth-of-type(3) {
+  .view--discover-crypto .section:nth-of-type(1), .view--discover-crypto .section:nth-of-type(2), .view--discover-crypto .section:nth-of-type(3), .view--deposit .section:nth-of-type(1), .view--deposit .section:nth-of-type(2), .view--deposit .section:nth-of-type(3), .view--platform .section:nth-of-type(1), .view--platform .section:nth-of-type(2), .view--platform .section:nth-of-type(3), .view--prices .section:nth-of-type(1), .view--prices .section:nth-of-type(2), .view--prices .section:nth-of-type(3), .view--accounts .section:nth-of-type(1), .view--accounts .section:nth-of-type(2), .view--accounts .section:nth-of-type(3), .view--about .section:nth-of-type(1), .view--about .section:nth-of-type(2), .view--about .section:nth-of-type(3), .view--security .section:nth-of-type(1), .view--security .section:nth-of-type(2), .view--security .section:nth-of-type(3), .view--faq .section:nth-of-type(1), .view--faq .section:nth-of-type(2), .view--faq .section:nth-of-type(3) {
     padding-bottom: 80px;
+  }
+  .view--prices [id=sec-crypto-widget] {
+    display: none;
+  }
+  .view--platform [id=sec-crypto-table] {
+    display: none;
   }
   .scrollmagic-pin-spacer {
     box-sizing: border-box !important;
@@ -2040,20 +2041,11 @@ table {
     padding-bottom: 140px;
   }
   .view--homepage .section:nth-of-type(5) {
-    padding-bottom: 140px;
-  }
-  .view--homepage .section:nth-of-type(6) {
     padding-top: 100px;
     padding-bottom: 40px;
     background: #0c0d29;
   }
-  .view--discover-crypto .section:nth-of-type(1), .view--deposit .section:nth-of-type(1), .view--prices .section:nth-of-type(1), .view--platform .section:nth-of-type(1), .view--security .section:nth-of-type(1), .view--faq .section:nth-of-type(1) {
-    padding-bottom: 160px;
-  }
-  .view--discover-crypto .section:nth-of-type(2), .view--deposit .section:nth-of-type(2), .view--prices .section:nth-of-type(2), .view--platform .section:nth-of-type(2), .view--security .section:nth-of-type(2), .view--faq .section:nth-of-type(2) {
-    padding-bottom: 160px;
-  }
-  .view--discover-crypto .section:nth-of-type(3), .view--deposit .section:nth-of-type(3), .view--prices .section:nth-of-type(3), .view--platform .section:nth-of-type(3), .view--security .section:nth-of-type(3), .view--faq .section:nth-of-type(3) {
+  .view--discover-crypto .section:nth-of-type(1), .view--discover-crypto .section:nth-of-type(2), .view--discover-crypto .section:nth-of-type(3), .view--deposit .section:nth-of-type(1), .view--deposit .section:nth-of-type(2), .view--deposit .section:nth-of-type(3), .view--platform .section:nth-of-type(1), .view--platform .section:nth-of-type(2), .view--platform .section:nth-of-type(3), .view--security .section:nth-of-type(1), .view--security .section:nth-of-type(2), .view--security .section:nth-of-type(3), .view--faq .section:nth-of-type(1), .view--faq .section:nth-of-type(2), .view--faq .section:nth-of-type(3) {
     padding-bottom: 160px;
   }
   .view--accounts .section:nth-of-type(1) {
@@ -2207,20 +2199,130 @@ table {
     color: rgb(0, 0, 0);
     padding: 1rem;
   }
+  .view--homepage .crypto img[id=img-on-other-pages] {
+    display: none;
+  }
+  .view--homepage .crypto__table tr:nth-of-type(6), .view--homepage .crypto__table tr:nth-of-type(7), .view--homepage .crypto__table tr:nth-of-type(8), .view--homepage .crypto__table tr:nth-of-type(9) {
+    display: none;
+  }
+  .view--platform .crypto img[id=img-on-other-homepage], .view--prices .crypto img[id=img-on-other-homepage] {
+    display: none;
+  }
+  .crypto__table {
+    width: 100%;
+    color: #aeafb2;
+    border: none;
+  }
+  .crypto__table thead tr {
+    color: #7a7b80;
+    height: 50px;
+    border-bottom: 1px solid #e4e4eb;
+  }
+  .crypto__table thead tr th {
+    text-align: end;
+    vertical-align: middle;
+    padding: 0 10px;
+  }
+  .crypto__table thead tr th:nth-of-type(1), .crypto__table thead tr th:nth-of-type(2) {
+    text-align: start;
+  }
+  .crypto__table tbody tr {
+    height: 77px;
+    transition: 0.2s all ease-in-out;
+    border-bottom: 1px solid #e4e4eb;
+  }
+  .crypto__table tbody tr:hover {
+    background: #f8f8fa;
+  }
+  .crypto__table tbody tr th, .crypto__table tbody tr td {
+    position: relative;
+    padding: 0 10px;
+    text-align: end;
+    vertical-align: middle;
+  }
+  .crypto__table tbody tr th:nth-of-type(1), .crypto__table tbody tr th:nth-of-type(2), .crypto__table tbody tr td:nth-of-type(1), .crypto__table tbody tr td:nth-of-type(2) {
+    text-align: start;
+  }
+  .crypto__table tbody tr th span, .crypto__table tbody tr td span {
+    position: relative;
+    top: -5px;
+  }
+  .crypto__table tbody tr td {
+    text-transform: capitalize;
+  }
+  .crypto__table tbody tr td img {
+    margin: 0px 10px 0px 0;
+  }
+  .crypto__table tbody tr p {
+    display: inline-block;
+    padding: 2px 0px 2px 22px;
+  }
   .crypto__widget {
-    display: flex;
-    justify-content: start;
+    display: none;
+    justify-content: space-between;
     align-items: center;
+    min-width: none;
+    max-width: 390px;
+    width: 100%;
     padding: 30px;
     border-radius: 36px;
     background: #FFFFFF;
-    border: 2px solid #e2e3e4;
+    border: 1px solid #e2e3e4;
     margin-bottom: 14px;
+    margin-right: 14px;
   }
-  .crypto__widget-ico img {
+  .crypto__widget-logo {
     display: block;
-    min-width: 54px;
     margin-right: 20px;
+  }
+  .crypto__widget-logo img {
+    width: 54px;
+    height: 54px;
+  }
+  .crypto__widget-name {
+    align-self: flex-start;
+    justify-self: start;
+  }
+  .crypto__widget-name h3 {
+    text-transform: uppercase;
+  }
+  .crypto__widget-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 8px 22px 0 10px;
+    text-align: right;
+  }
+  .crypto__widget-price p:nth-child(1) {
+    padding: 2px 12px 2px 22px;
+    border-radius: 20px;
+    background: #f2f2f3;
+  }
+  .crypto__widget.bitcoin, .crypto__widget.ethereum, .crypto__widget.tether {
+    display: flex;
+  }
+  .crypto .change {
+    position: relative;
+  }
+  .crypto .change::before {
+    content: "";
+    position: absolute;
+    top: 39%;
+    left: 10px;
+    width: 12px;
+    height: 6px;
+  }
+  .crypto.rising .price, .crypto.rising .change {
+    color: #07f070 !important;
+  }
+  .crypto.rising .change:before {
+    background: url("../../../../public/img/icons/ico-rising.svg") no-repeat;
+  }
+  .crypto.falling .price, .crypto.falling .change {
+    color: #ef4209 !important;
+  }
+  .crypto.falling .change:before {
+    background: url("../../../../public/img/icons/ico-falling.svg") no-repeat;
   }
 }
 @media (min-width: 0) {

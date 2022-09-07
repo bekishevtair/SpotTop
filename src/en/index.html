@@ -26,6 +26,7 @@
 
   <script src="../assets/scripts/ext/jquery/jquery-3.6.0.min.js"></script>
   <script src="../assets/scripts/int/script.js"></script>
+
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
   <script>
@@ -48,8 +49,10 @@
               <h1 class="tit ts-38 ts-lg-64 tc-dblue tw-700 mb-3">
                 Take Control of Your Cryptocurrency and Profit
               </h1>
-              <div class="img img-hp-1woman d-lg-none d-flex mb-3">
-                <img src="../public/img/ui/img-hp-1woman.png" alt="">
+              <div class="wrapper d-flex justify-content-center align-items-center">
+                <div class="img img-hp-1woman d-lg-none d-flex mb-3">
+                  <img src="../public/img/ui/img-hp-1woman.png" alt="">
+                </div>
               </div>
               <p class="txt ts-18 ts-lg-24 tc-gray tw-400 mb-4">
                 Securely buy, sell, trade, and earn cryptocurrencies using our intuititive and user-friendly platform, DXtrade.
@@ -71,82 +74,15 @@
     </section>
     <section class="section" id="sec-02">
       <div class="container">
-        <div class="d-flex row row-cols-lg-auto">
-          <div class="col px-2">
-            <div class="crypto__widget">
-              <div class="crypto__widget-ico"><img src="../public/img/icons/ico-btc.svg" ></div>
-              <div class="d-flex flex-column">
-                <h4 class="tit ts-24 tc-dblue">
-                  $<span id="bitcoin"></span>
-                </h4>
-                <p class="tit ts-20 tc-gray">
-                  Bitcoin
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col px-2">
-            <div class="crypto__widget">
-              <div class="crypto__widget-ico"><img src="../public/img/icons/ico-ltc.svg" ></div>
-              <div class="d-flex flex-column">
-                <h4 class="tit ts-24 tc-dblue">
-                  $<span id="litecoin"></span>
-                </h4>
-                <p class="tit ts-20 tc-gray">
-                  Litecoin
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col px-2">
-            <div class="crypto__widget">
-              <div class="crypto__widget-ico"><img src="../public/img/icons/ico-eth.svg" ></div>
-              <div class="d-flex flex-column">
-                <h4 class="tit ts-24 tc-dblue">
-                  $<span id="ethereum"></span>
-                </h4>
-                <p class="tit ts-20 tc-gray">
-                  Ethereum
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col px-2">
-            <div class="crypto__widget">
-              <div class="crypto__widget-ico"><img src="../public/img/icons/ico-doge.svg" ></div>
-              <div class="d-flex flex-column">
-                <h4 class="tit ts-24 tc-dblue">
-                  $<span id="dogecoin"></span>
-                </h4>
-                <p class="tit ts-20 tc-gray">
-                  Dogecoin
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col px-2">
-            <div class="crypto__widget">
-              <div class="crypto__widget-ico"><img src="../public/img/icons/ico-usdt.svg" ></div>
-              <div class="d-flex flex-column">
-                <h4 class="tit ts-24 tc-dblue">
-                  $<span id="tether"></span>
-                </h4>
-                <p class="tit ts-20 tc-gray">
-                  Tether
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="js-import" data-import="sec-crypto-widget">
         </div>
-
-    </div>
-   
-    </section>
-    <section class="section" id="sec-03">
-      <div class="container">
-        <div class="row">
-          <p class="txt ts-30 tc-dblue tw-700 ta-center">- - HERE WILL BE CRYPTO - -</p>
-        </div>
+      </div>
+      <div class="wrapper d-flex justify-content-center">
+        <a href="" class="btn btn-s4 btn-border btn-w-180">
+          <span>
+            View more
+          </span>
+        </a>
       </div>
     </section>
     <section class="section" id="sec-pin">
@@ -398,7 +334,6 @@
   <footer class="js-import footer" data-import="footer">
   </footer>
   <script src="../assets/scripts/int/scrolling.js"></script>
-  <script src="../assets/scripts/int/calc.js"></script>
 
 </body>
 </html>
