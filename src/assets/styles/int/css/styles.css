@@ -2179,6 +2179,9 @@ table {
   div[id=sec-crypto-table]::-webkit-scrollbar-thumb {
     background: 2px solid #FBFBFC;
   }
+  .crypto-value {
+    display: none;
+  }
   .crypto__table {
     width: 100%;
     color: #aeafb2;
@@ -2284,25 +2287,92 @@ table {
   }
   .crypto__calc-input-item-field {
     display: flex;
+    max-height: 60px;
     flex-direction: row;
     margin-top: 14px;
     background: transparent;
     border-radius: 8px;
     border: 2px solid #7d7e90;
   }
-  .crypto__calc-input-item-field input, .crypto__calc-input-item-field select {
+  .crypto__calc-input-item-field input {
     background: transparent;
     padding: 14px;
     color: #FFFFFF;
     outline: none;
     border: none;
   }
-  .crypto__calc-input-item-field select {
-    text-transform: capitalize;
+  .crypto__calc-select-field {
+    max-height: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.001);
   }
-  .crypto__calc-input-item-field select option {
-    color: #000000;
+  .crypto__calc-select-field input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .crypto__calc-select-field input:focus {
+    outline: none;
+  }
+  .crypto__calc-select-field input::placeholder {
     text-transform: capitalize;
+    color: #7d7e90;
+  }
+  .crypto__calc-select-list {
+    overflow-y: auto;
+    max-height: 300px;
+    position: absolute;
+    width: fit-content;
+    min-width: 200px;
+    margin-top: 16px;
+    background: #181a50;
+    color: #7d7e90;
+    border-radius: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+    z-index: 1;
+  }
+  .crypto__calc-select-list::-webkit-scrollbar {
+    width: 2px;
+  }
+  .crypto__calc-select-list::-webkit-scrollbar-thumb {
+    background: 2px solid #FBFBFC;
+  }
+  .crypto__calc-select-list.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .crypto__calc-select-list-item {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    padding: 0 16px;
+    cursor: pointer;
+  }
+  .crypto__calc-select-list-item label {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+  .crypto__calc-select-list-item label img {
+    margin-right: 10px;
+  }
+  .crypto__calc-select-list-item:hover {
+    background: #232678;
+    border-radius: inherit;
   }
   .crypto .display-result {
     text-align: center;
@@ -2331,65 +2401,6 @@ table {
   }
   .crypto.falling .change:before {
     background: url("../../../../public/img/icons/ico-falling.svg") no-repeat;
-  }
-  .select {
-    max-width: 300px;
-  }
-  .select__field {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 12px;
-    border-radius: 10px;
-    background: #0c0d29;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.001);
-  }
-  .select__field input {
-    border: none;
-    line-height: 36px;
-    padding: 6px 18px;
-    border-radius: 10px;
-    font-size: 16px;
-    background: #0c0d29;
-    cursor: pointer;
-  }
-  .select__field input:focus {
-    outline: none;
-  }
-  .select__field input::placeholder {
-    color: #7d7e90;
-  }
-  .select__field button {
-    border: 0;
-    background: transparent;
-    color: #FFFFFF;
-    font-size: 24px;
-    padding: 4px;
-    padding-top: 10px;
-    cursor: pointer;
-  }
-  .select__list {
-    padding: 8px;
-    margin-top: 16px;
-    background: #0c0d29;
-    color: #7d7e90;
-    border-radius: 14px;
-    display: none;
-  }
-  .select__list.active {
-    display: block;
-  }
-  .select__list-item {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    align-items: center;
-    padding: 14px 16px;
-    cursor: pointer;
-  }
-  .select__list-item:hover {
-    background: #232678;
-    border-radius: 8px;
   }
 }
 @media (min-width: 0) {

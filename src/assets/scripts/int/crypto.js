@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-  document.querySelector('#calc-form').oninput = ()=>{
+  document.querySelector('#crypto__calc').oninput = ()=>{
     const base = document.getElementById('currency-from').value;
       fetch(`https://api.exchangerate.host/latest?/source=ecb&base=${base}`)
         .then((response) => response.json())

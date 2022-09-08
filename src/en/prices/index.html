@@ -26,7 +26,7 @@
 
   <script src="../../assets/scripts/ext/jquery/jquery-3.6.0.min.js"></script>
   <script src="../../assets/scripts/int/script.js"></script>
-  
+
   
 
 
@@ -70,10 +70,13 @@
                           <label for="input-amount" class="txt ts-16 tc-lblue">Select currency</label>
                           <div class="crypto__calc-input-item-field">
                             <input type="number" step=".01" name="" id="input-amount" placeholder="Amount">
-                            <select name="select-crypto" id="select-crypto">
-                            
-                              <option value="USD">AMD - Armenian Dram</option>
-                            </select>
+                            <div class="crypto__calc-select mb-5">
+                              <div class="crypto__calc-select-field">
+                                <input type="text" name="" id="input" class="crypto__calc-select-box" placeholder="Bitcoin" readonly>
+                              </div>
+                              <div class="crypto__calc-select-list">
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -92,7 +95,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <p class="tit ts-16 tc-lblue">
+                    <p class="tit ts-16 tc-lblue ta-center">
                       Convert result
                     </p>
                   </div>
@@ -140,78 +143,13 @@
         </div>
       </div>
     </section>
-
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="select mb-5">
-            <div class="select__field">
-              <input type="text" name="" id="input" class="select__box" placeholder="Select" readonly>
-              <button class="select__btn">fvcd</button>
-            </div>
-            <div class="select__list">
-              <div class="select__list-item">
-                <img src="../../public/img/icons/ico-bitcoin.svg" alt="">
-                <p>
-                  Bitcoin
-                </p>
-              </div>
-              <div class="select__list-item">
-                <img src="" alt="">
-                <p>
-                  Ethereum
-                </p>
-              </div>
-              <div class="select__list-item">
-                <img src="" alt="">
-                <p>
-                  Solana
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-   
   </main>
   <footer class="js-import" data-import="footer"></footer>
-  <script>
-    fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Clitecoin%2Cripple%2Ccardano%2Cdogecoin%2Ctether%2Csolana%2Cethereum-classic&vs_currencies=usd&include_market_cap=true&include_24hr_change=true')
-    .then(res => res.json())
-    .then(json => {
-
-        const coins = ['bitcoin','ethereum','tether','ripple','cardano','solana','dogecoin','ethereum-classic','litecoin'];
-        
-        function convertCrypto() {
-          for (let coin of coins) {
-            const coinInfo = json[`${coin}`];
-            const price = coinInfo.usd.toFixed(3);
-            const change = coinInfo.usd_24h_change.toFixed(3);
-            const options = document.querySelector('#select-crypto');
-            options.innerHTML += 
-            `
-            <option class='option' value="${price}">
-              ${coin}
-            </option>
-            `
-            document.querySelector('#crypto__calc').oninput = ()=>{
-              const amount = document.querySelector("#input-amount").value;
-              const selectedCrypto = document.querySelector('[selected=selected]');
-              const result = amount * price
-              console.log(result)
-            
-              document.querySelector('.converted-result').innerHTML = `${result} `;
-                
-            };
-          }
-
-        }
-        convertCrypto()
-    });
-  </script>
   <script src="../../assets/scripts/int/cryptocalc.js"></script>
-
+  <script>
+    // $(document).on('click', 'section', function(){
+    //     $(this).addClass('selected').siblings().removeClass('selected')
+    //   })
+  </script>
 </body>
 </html>
