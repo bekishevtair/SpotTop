@@ -6,53 +6,7 @@
     }
 }
 
-.calc {
-  &__box{
-    color: #fff !important;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 40px;
-    border-radius: 36px;
-    background: map-get($bc, 'dblue' );
-  }
-  &__input {
-    &-item {
-      &-field {
-        display: flex;
-        flex-direction: row;
-        margin-top: 14px;
-        background: transparent;
-        border-radius: 8px;
-        border: 2px solid map-get($bc, 'lblue' );
-        input, select {
-          background: transparent;
-          padding: 14px;
-          color: $w;
-          outline: none;
-          border: none;
-        }
-        input {
-          width: 60%;
-        }
-        select {
-          width: 40%;
-          option {
-            color: $b;
-          }
-        }
-      }
-    }
-  }
 
- 
-}
-
-  .display-result{
-      text-align: center;
-      color: rgb(0, 0, 0);
-      padding: 1rem;
-  }
   .view {
     &--homepage {
       .crypto {
@@ -82,6 +36,15 @@
           }
         }
       }
+    }
+  }
+  div[id="sec-crypto-table"] {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: 2px solid map-get($bc, 'light' );
     }
   }
   .crypto {
@@ -136,7 +99,8 @@
             img {
               margin: 0px 10px 0px 0;
             }
-            &:last-child {
+            &:nth-of-type(2) {
+              min-width: 140px;
             }
           }
           p {
@@ -183,7 +147,7 @@
         p:nth-child(1) {
           padding: 2px 12px 2px 22px;
           border-radius: 20px;
-          background: lighten(map-get($bc, 'gray' ),26%);
+          background: lighten(map-get($bc, 'gray' ), 26%);
         }
       }
       &.bitcoin,
@@ -191,6 +155,50 @@
       &.tether {
         display: flex;
       }
+    }
+    &__calc {
+      &-box{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px;
+        border-radius: 36px;
+        background: map-get($bc, 'dblue' );
+      }
+      &-input {
+        &-item {
+          &-field {
+            display: flex;
+            flex-direction: row;
+            margin-top: 14px;
+            background: transparent;
+            border-radius: 8px;
+            border: 2px solid map-get($bc, 'lblue' );
+            input, select {
+              background: transparent;
+              padding: 14px;
+              color: $w;
+              outline: none;
+              border: none;
+            }
+            input {
+            }
+            select {
+              text-transform: capitalize;
+              option {
+                color: $b;
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+      }
+    
+     
+    }
+    .display-result{
+        text-align: center;
+        color: rgb(0, 0, 0);
+        padding: 1rem;
     }
     & .change {
       position: relative;
@@ -225,6 +233,70 @@
     }
   }
 
+  .select {
+    max-width: 300px;
+    &__field {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 12px;
+      border-radius: 10px;
+      background: map-get($bc, 'dblue' );
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.001);
+      input  {
+        border: none;
+        line-height: 36px;
+        padding: 6px 18px;
+        border-radius: 10px;
+        font-size: 16px;
+        background: map-get($bc, 'dblue' );
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          color: map-get($bc, 'lblue' );
+        }
+      }
+      button {
+        border: 0;
+        background: transparent;
+        color: $w;
+        font-size: 24px;
+        padding: 4px;
+        padding-top: 10px;
+        cursor: pointer;
+      }
+    }
+    &__list {
+      padding: 8px;
+      margin-top: 16px;
+      background: map-get($bc, 'dblue' );
+      color: map-get($bc, 'lblue' );
+      border-radius: 14px;
+      display: none;
+      &.active {
+        display: block;
+      }
+      &-item {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        padding: 14px 16px;
+        cursor: pointer;
+        &:hover {
+          background: lighten(map-get($bc, 'dblue' ), 20%);
+          border-radius: 8px;
+
+        }
+      }
+
+
+    }
+  }
+
+
 }
 @media (min-width: $s-sm) {
   .crypto {
@@ -248,8 +320,6 @@
       }
     }
   }
-  
-  
 }
 @media (min-width: $s-md) {}
 @media (min-width: $s-lg) {}

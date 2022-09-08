@@ -2161,44 +2161,6 @@ table {
   .container-head h3 {
     color: #fff;
   }
-  .calc__box {
-    color: #fff !important;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 40px;
-    border-radius: 36px;
-    background: #0c0d29;
-  }
-  .calc__input-item-field {
-    display: flex;
-    flex-direction: row;
-    margin-top: 14px;
-    background: transparent;
-    border-radius: 8px;
-    border: 2px solid #7d7e90;
-  }
-  .calc__input-item-field input, .calc__input-item-field select {
-    background: transparent;
-    padding: 14px;
-    color: #FFFFFF;
-    outline: none;
-    border: none;
-  }
-  .calc__input-item-field input {
-    width: 60%;
-  }
-  .calc__input-item-field select {
-    width: 40%;
-  }
-  .calc__input-item-field select option {
-    color: #000000;
-  }
-  .display-result {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    padding: 1rem;
-  }
   .view--homepage .crypto img[id=img-on-other-pages] {
     display: none;
   }
@@ -2207,6 +2169,15 @@ table {
   }
   .view--platform .crypto img[id=img-on-other-homepage], .view--prices .crypto img[id=img-on-other-homepage] {
     display: none;
+  }
+  div[id=sec-crypto-table] {
+    overflow-x: scroll;
+  }
+  div[id=sec-crypto-table]::-webkit-scrollbar {
+    width: 2px;
+  }
+  div[id=sec-crypto-table]::-webkit-scrollbar-thumb {
+    background: 2px solid #FBFBFC;
   }
   .crypto__table {
     width: 100%;
@@ -2252,6 +2223,9 @@ table {
   }
   .crypto__table tbody tr td img {
     margin: 0px 10px 0px 0;
+  }
+  .crypto__table tbody tr td:nth-of-type(2) {
+    min-width: 140px;
   }
   .crypto__table tbody tr p {
     display: inline-block;
@@ -2301,6 +2275,40 @@ table {
   .crypto__widget.bitcoin, .crypto__widget.ethereum, .crypto__widget.tether {
     display: flex;
   }
+  .crypto__calc-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    border-radius: 36px;
+    background: #0c0d29;
+  }
+  .crypto__calc-input-item-field {
+    display: flex;
+    flex-direction: row;
+    margin-top: 14px;
+    background: transparent;
+    border-radius: 8px;
+    border: 2px solid #7d7e90;
+  }
+  .crypto__calc-input-item-field input, .crypto__calc-input-item-field select {
+    background: transparent;
+    padding: 14px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+  }
+  .crypto__calc-input-item-field select {
+    text-transform: capitalize;
+  }
+  .crypto__calc-input-item-field select option {
+    color: #000000;
+    text-transform: capitalize;
+  }
+  .crypto .display-result {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+  }
   .crypto .change {
     position: relative;
   }
@@ -2323,6 +2331,65 @@ table {
   }
   .crypto.falling .change:before {
     background: url("../../../../public/img/icons/ico-falling.svg") no-repeat;
+  }
+  .select {
+    max-width: 300px;
+  }
+  .select__field {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 12px;
+    border-radius: 10px;
+    background: #0c0d29;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.001);
+  }
+  .select__field input {
+    border: none;
+    line-height: 36px;
+    padding: 6px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #0c0d29;
+    cursor: pointer;
+  }
+  .select__field input:focus {
+    outline: none;
+  }
+  .select__field input::placeholder {
+    color: #7d7e90;
+  }
+  .select__field button {
+    border: 0;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 24px;
+    padding: 4px;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+  .select__list {
+    padding: 8px;
+    margin-top: 16px;
+    background: #0c0d29;
+    color: #7d7e90;
+    border-radius: 14px;
+    display: none;
+  }
+  .select__list.active {
+    display: block;
+  }
+  .select__list-item {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    padding: 14px 16px;
+    cursor: pointer;
+  }
+  .select__list-item:hover {
+    background: #232678;
+    border-radius: 8px;
   }
 }
 @media (min-width: 0) {
