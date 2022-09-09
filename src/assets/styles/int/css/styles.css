@@ -2048,6 +2048,15 @@ table {
   .view--discover-crypto .section:nth-of-type(1), .view--discover-crypto .section:nth-of-type(2), .view--discover-crypto .section:nth-of-type(3), .view--deposit .section:nth-of-type(1), .view--deposit .section:nth-of-type(2), .view--deposit .section:nth-of-type(3), .view--platform .section:nth-of-type(1), .view--platform .section:nth-of-type(2), .view--platform .section:nth-of-type(3), .view--security .section:nth-of-type(1), .view--security .section:nth-of-type(2), .view--security .section:nth-of-type(3), .view--faq .section:nth-of-type(1), .view--faq .section:nth-of-type(2), .view--faq .section:nth-of-type(3) {
     padding-bottom: 160px;
   }
+  .view--prices .section:nth-of-type(1) {
+    padding-bottom: 100px;
+  }
+  .view--prices .section:nth-of-type(2) {
+    padding-bottom: 160px;
+  }
+  .view--prices .section:nth-of-type(3) {
+    padding-bottom: 130px;
+  }
   .view--accounts .section:nth-of-type(1) {
     padding-bottom: 60px;
   }
@@ -2180,9 +2189,13 @@ table {
     background: 2px solid #FBFBFC;
   }
   .crypto-value {
+    position: relative;
     width: 0;
+    max-width: 86px;
     height: 0;
-    display: flex;
+    display: block;
+    cursor: pointer;
+    text-align: end;
   }
   .crypto__table {
     width: 100%;
@@ -2230,7 +2243,9 @@ table {
     margin: 0px 10px 0px 0;
   }
   .crypto__table tbody tr td:nth-of-type(2) {
+    font-weight: 600;
     min-width: 140px;
+    color: #7a7b80;
   }
   .crypto__table tbody tr p {
     display: inline-block;
@@ -2280,15 +2295,30 @@ table {
   .crypto__widget.bitcoin, .crypto__widget.ethereum, .crypto__widget.tether {
     display: flex;
   }
+  .crypto__calc {
+    width: 100%;
+  }
   .crypto__calc-box {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     padding: 40px;
     border-radius: 36px;
     background: #0c0d29;
   }
+  .crypto__calc-box .crypto__label {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+  .crypto__calc-box .crypto__label img {
+    margin-right: 10px;
+  }
   .crypto__calc-input-item-field {
     display: flex;
+    min-height: 60px;
     max-height: 60px;
     flex-direction: row;
     margin-top: 14px;
@@ -2297,14 +2327,34 @@ table {
     border: 2px solid #7d7e90;
   }
   .crypto__calc-input-item-field input {
+    width: 50%;
     background: transparent;
     padding: 14px;
     color: #FFFFFF;
     outline: none;
     border: none;
   }
+  .crypto__calc-input-item-field input::-webkit-outer-spin-button, .crypto__calc-input-item-field input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .crypto__calc-input-item-field input::placeholder {
+    color: #7d7e90;
+    font-size: 16px;
+    transition: 0.1s all ease-in-out;
+    opacity: 1;
+    visibility: visible;
+  }
+  .crypto__calc-input-item-field input:focus::placeholder {
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .crypto__calc-select {
+    width: 50%;
+  }
   .crypto__calc-select-field {
-    max-height: 60px;
+    height: 56px;
     position: relative;
     display: flex;
     align-items: center;
@@ -2313,12 +2363,10 @@ table {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.001);
   }
   .crypto__calc-select-field input {
-    width: 100%;
     border: none;
     border-radius: 10px;
     font-size: 16px;
     background: transparent;
-    cursor: pointer;
   }
   .crypto__calc-select-field input:focus {
     outline: none;
@@ -2332,6 +2380,7 @@ table {
     max-height: 300px;
     position: absolute;
     width: fit-content;
+    max-width: 320px;
     min-width: 200px;
     margin-top: 16px;
     background: #181a50;
@@ -2343,7 +2392,7 @@ table {
     z-index: 1;
   }
   .crypto__calc-select-list::-webkit-scrollbar {
-    width: 2px;
+    width: 0px;
   }
   .crypto__calc-select-list::-webkit-scrollbar-thumb {
     background: 2px solid #FBFBFC;
@@ -2358,28 +2407,50 @@ table {
     flex-direction: row;
     gap: 8px;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 0px 0 16px;
     cursor: pointer;
-  }
-  .crypto__calc-select-list-item label {
-    text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-  }
-  .crypto__calc-select-list-item label img {
-    margin-right: 10px;
+    transition: 0.1s all ease-in-out;
   }
   .crypto__calc-select-list-item:hover {
-    background: #232678;
-    border-radius: inherit;
+    width: 100%;
+    background: #7d7e90;
   }
-  .crypto .display-result {
+  .crypto__calc-select-list-item:hover p, .crypto__calc-select-list-item:hover span, .crypto__calc-select-list-item:hover label {
+    color: #FFFFFF !important;
+    transition: 0.1s all ease-in-out;
+  }
+  .crypto__calc .converted-result {
+    display: flex;
+    align-items: center;
+  }
+  .crypto__calc .converted-result:nth-of-type(1) input {
+    color: #FFFFFF;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: default;
+  }
+  .crypto__calc .converted-result:nth-of-type(1) input[id=converted-result-main] {
+    max-width: 600px;
     text-align: center;
-    color: rgb(0, 0, 0);
-    padding: 1rem;
+    height: 100px;
+    color: #FFFFFF;
+    font-size: 80px;
+    font-weight: 700;
+  }
+  .crypto__calc .converted-result:nth-of-type(1) input[id=converted-result-smaller] {
+    min-width: 50%;
+    height: 60px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .crypto__calc .converted-result:nth-of-type(1) input[id=converted-result-smaller-2] {
+    text-align: center;
+    height: 30px;
+    color: #7d7e90;
+    font-weight: 600;
+    font-size: 16px;
   }
   .crypto .change {
     position: relative;

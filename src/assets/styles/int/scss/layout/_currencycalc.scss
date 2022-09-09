@@ -15,7 +15,6 @@
             display: none;
           }
         }
-        
         &__table {
           tr {
             &:nth-of-type(6),
@@ -49,9 +48,13 @@
   }
   .crypto {
     &-value {
+      position: relative;
       width: 0;
+      max-width: 86px;
       height: 0;
-      display: flex;
+      display: block;
+      cursor: pointer;
+      text-align: end;
     }
     &__table {
       width: 100%;
@@ -105,7 +108,9 @@
               margin: 0px 10px 0px 0;
             }
             &:nth-of-type(2) {
+              font-weight: 600;
               min-width: 140px;
+              color: darken(map-get($bc, 'gray' ),20%);
             }
           }
           p {
@@ -162,17 +167,32 @@
       }
     }
     &__calc {
+      width: 100%;
       &-box{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         padding: 40px;
+
         border-radius: 36px;
         background: map-get($bc, 'dblue' );
+        .crypto__label {
+          text-transform: capitalize;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          cursor: pointer;
+          img {
+            margin-right: 10px;
+          }
+        
+        }
       }
       &-input {
         &-item {
           &-field {
             display: flex;
+            min-height: 60px;
             max-height: 60px;
             flex-direction: row;
             margin-top: 14px;
@@ -180,18 +200,39 @@
             border-radius: 8px;
             border: 2px solid map-get($bc, 'lblue' );
             input {
+              width: 50%;
               background: transparent;
               padding: 14px;
               color: $w;
               outline: none;
               border: none;
+              &::-webkit-outer-spin-button,
+              &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+              }
+              &::placeholder {
+                color: map-get($bc, 'lblue');
+                font-size: 16px;
+                transition: .1s all ease-in-out;
+                opacity: 1;
+                visibility: visible;
+              }
+              &:focus {
+                &::placeholder {
+                  font-size: 0;
+                  opacity: 0;
+                  visibility: hidden;
+                }
+              }
             }
           }
         }
       }
       &-select {
+        width: 50%;
         &-field {
-          max-height: 60px;
+          height: 56px;
           position: relative;
           display: flex;
           align-items: center;
@@ -199,12 +240,10 @@
           border-radius: 10px;
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.001);
           input  {
-            width: 100%;
             border: none;
             border-radius: 10px;
             font-size: 16px;
             background: transparent;
-            cursor: pointer;
             &:focus {
               outline: none;
             }
@@ -219,6 +258,7 @@
           max-height: 300px;
           position: absolute;
           width: fit-content;
+          max-width: 320px;
           min-width: 200px;
           margin-top: 16px;
           background: lighten(map-get($bc, 'dblue' ), 10%);
@@ -229,7 +269,7 @@
           transition: all ease-in-out .2s;
           z-index: 1;
           &::-webkit-scrollbar {
-            width: 2px;
+            width: 0px;
           }
           &::-webkit-scrollbar-thumb {
             background: 2px solid map-get($bc, 'light' );
@@ -244,33 +284,58 @@
             flex-direction: row;
             gap: 8px;
             align-items: center;
-            padding: 0 16px;
+            padding: 0 0px 0 16px;
             cursor: pointer;
-            label {
-              text-transform: capitalize;
-              display: flex;
-              align-items: center;
-              height: 100%;
-              width: 100%;
-              cursor: pointer;
-              img {
-                margin-right: 10px;
-              }
-            }
+            transition: .1s all ease-in-out;
+          
             &:hover {
-              background: lighten(map-get($bc, 'dblue' ), 20%);
-              border-radius: inherit;
+              width: 100%;
+              background: map-get($bc, 'lblue' );
+              p, span, label {
+                color: $w !important;
+                transition: .1s all ease-in-out;
+              }
+
+            }
+          }
+        }
+        
+      }
+      .converted-result {
+        display: flex;
+        align-items: center;
+        &:nth-of-type(1) {
+          input {
+            color: $w;
+            background: transparent;
+            outline: none;
+            border: none;
+            cursor: default;
+            &[id="converted-result-main"] {
+              max-width: 600px;
+              text-align: center;
+              height: 100px;
+              color: $w;
+              font-size: 80px;
+              font-weight: 700;
+            }
+            &[id="converted-result-smaller"] {
+              min-width: 50%;
+              height: 60px;
+              color: $w;
+              font-weight: 600;
+              font-size: 18px;
+            }
+            &[id="converted-result-smaller-2"] {
+              text-align: center;
+              height: 30px;
+              color: map-get($bc, 'lblue' );
+              font-weight: 600;
+              font-size: 16px;
             }
           }
         }
       }
-    
-     
-    }
-    .display-result{
-        text-align: center;
-        color: rgb(0, 0, 0);
-        padding: 1rem;
     }
     & .change {
       position: relative;
@@ -304,7 +369,6 @@
       }
     }
   }
-
   
 }
 @media (min-width: $s-sm) {

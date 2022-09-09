@@ -27,9 +27,6 @@
   <script src="../../assets/scripts/ext/jquery/jquery-3.6.0.min.js"></script>
   <script src="../../assets/scripts/int/script.js"></script>
 
-  
-
-
 </head>
 <body>
   <div style="display: none !important;">
@@ -41,7 +38,7 @@
     <section class="section" id="sec-01">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-5">
+          <div class="col-12 col-md-5">
             <div class="wrapper d-flex flex-column justify-content-center">
               <p class="txt ts-18 ts-lg-24 tc-orange tw-500 mb-2">
                 Prices
@@ -54,25 +51,27 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-lg-6 offset-lg-1">
+          <div class="col-12 col-md-6 offset-md-1">
             <div class="wrapper d-flex justify-content-start align-items-start">
-              <form action="" class="convert" id="crypto__calc">
+              <form action="" class="crypto__calc" id="crypto__calc">
                 <div class="crypto__calc-box">
                   <div class="row">
                     <h4 class="tit ts-28 tc-white tw-700 ta-left mb-4">
                       Crypto converter calculator
                     </h4>
                   </div>
-                  <div class="row wrapper mb-4">
-                    <div class="col-12 col-lg-7">
+                  <div class="d-flex flex-column flex-lg-row wrapper mb-4">
+                    <div class="col">
                       <div class="crypto__calc-input">
                         <div class="crypto__calc-input-item">
-                          <label for="input-amount" class="txt ts-16 tc-lblue">Select currency</label>
+                          <label for="input-amount" class="txt ts-16 tw-500 tc-lblue">Select currency</label>
                           <div class="crypto__calc-input-item-field">
-                            <input type="number" step=".01" name="" id="input-amount" placeholder="Amount">
+                            <input type="number" name="" id="input-amount" placeholder="Amount">
                             <div class="crypto__calc-select mb-5">
                               <div class="crypto__calc-select-field">
-                                <input type="text" name="" id="input" class="crypto__calc-select-box" placeholder="Bitcoin" readonly>
+                                <label for="input" id="input-label" class="crypto__label txt ts-16 tc-lblue">
+                                  Select crypto
+                                </label>
                               </div>
                               <div class="crypto__calc-select-list">
                               </div>
@@ -81,28 +80,46 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-4 offset-lg-1 d-none">
+                    <div class="col-1">
+
+                    </div>
+                    <div class="col">
                       <div class="crypto__calc-input">
                         <div class="crypto__calc-input-item">
-                          <label for="" class="txt ts-16 tc-lblue">To</label>
+                          <label for="" class="txt ts-16 tc-lblue tw-500">To</label>
                           <div class="crypto__calc-input-item-field">
-                            <select name="currency-to" id="currency-to">
-                              <option value="USD">USD - Emirati Dirham</option>
-                            </select>
+                            <div class="d-flex converted-result">
+                              <input type="number" id="converted-result-smaller" class="" value="0" readonly>
+                              <label class='crypto__label converted-result-smaller' for="${coin}">
+                                <img src="../../public/img/icons/ico-usd.svg" alt="">
+                                <span class="txt tc-18 tc-lblue">
+                                  USD
+                                </span>
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <p class="tit ts-16 tc-lblue ta-center">
+                  <div class="row mb-3">
+                    <p class="tit ts-16 tc-lblue tw-500 ta-left">
                       Convert result
                     </p>
                   </div>
                   <div class="row">
-                    <p class="txt ts-60 tc-white tw-700 ta-center converted-result">
-                      
-                    </p>
+                    <div class="wrapper d-flex justify-content-center">
+                      <div class="converted-result">
+                        <input type="number" id="converted-result-main" class="" value="0" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="wrapper d-flex justify-content-center">
+                      <div class="converted-result">
+                        <input type="number" id="converted-result-smaller-2" class="" value="0.00" readonly>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -146,10 +163,6 @@
   </main>
   <footer class="js-import" data-import="footer"></footer>
   <script src="../../assets/scripts/int/cryptocalc.js"></script>
-  <script>
-    // $(document).on('click', 'section', function(){
-    //     $(this).addClass('selected').siblings().removeClass('selected')
-    //   })
-  </script>
+  
 </body>
 </html>

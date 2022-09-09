@@ -20,21 +20,21 @@
         options.innerHTML += 
         `
         <div class="crypto__calc-select-list-item">
-          <label for="${coin}">
+          <label class='crypto__label' for="${coin}">
             <img src="../../public/img/icons/ico-${coin}.svg" alt="">
             ${coin}
           </label>
-          <input type="text" id="${coin}" class="crypto-value" value="${price}">
+          <input type="text" id="${coin}" class="crypto-value" value="${price}" readonly>
         </div>
         `
         document.querySelector('#crypto__calc').oninput = ()=>{
           const amount = document.querySelector("#input-amount").value;
           const selected = document.querySelector(".selected").value;
           const result = amount*selected
-          console.log(amount)
-          console.log(selected)
 
-          document.querySelector('.converted-result').innerHTML = `${result.toFixed(2)}`;
+          document.querySelector('#converted-result-main').value = `${result.toFixed(0)}`;
+          document.querySelector('#converted-result-smaller').value = `${result.toFixed(0)}`;
+          document.querySelector('#converted-result-smaller-2').value = `${$result.toFixed(3)}`;
         };
       }
 
@@ -43,8 +43,8 @@
       const selectItem = document.querySelectorAll('.crypto__calc-select-list-item');
       selectItem.forEach(option => {
         option.addEventListener('click', () => {
-          let selectOption = option.querySelector('.crypto__calc-select-list-item label').innerText;
-          document.getElementById('input').placeholder = selectOption;
+          let selectOption = option.querySelector('.crypto__calc-select-list-item label').innerHTML;
+          document.getElementById('input-label').innerHTML = selectOption;
           selectList.classList.remove('active');
         })
       })
