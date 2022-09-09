@@ -1,6 +1,9 @@
 
 
-
+  $(document).on('click', '.crypto__calc-select-list-item input', function(){
+    $('.selected').removeClass('selected')
+    $(this).addClass('selected')
+  })
 
   fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Clitecoin%2Cripple%2Ccardano%2Cdogecoin%2Ctether%2Csolana%2Cethereum-classic&vs_currencies=usd&include_market_cap=true&include_24hr_change=true')
   .then(res => res.json())
@@ -21,7 +24,7 @@
             <img src="../../public/img/icons/ico-${coin}.svg" alt="">
             ${coin}
           </label>
-          <input type="text" id="${coin}" class="crypto-value selected" value="${price}">
+          <input type="text" id="${coin}" class="crypto-value" value="${price}">
         </div>
         `
         document.querySelector('#crypto__calc').oninput = ()=>{
@@ -53,7 +56,5 @@
    
   });
     
-  $(document).on('click', '.crypto__calc-select-list-item input', function(){
-    $(this).addClass('selected').siblings().removeClass('selected')
-  })
+
 

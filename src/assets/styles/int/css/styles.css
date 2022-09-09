@@ -2180,7 +2180,9 @@ table {
     background: 2px solid #FBFBFC;
   }
   .crypto-value {
-    display: none;
+    width: 0;
+    height: 0;
+    display: flex;
   }
   .crypto__table {
     width: 100%;
