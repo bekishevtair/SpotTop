@@ -21,12 +21,12 @@ fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cli
                   <img id='img-on-other-homepage' src="../public/img/icons/ico-${coin}.svg">
                 </div>
                 <div class="crypto__widget-name">
-                  <h3 class='txt ts-24 tc-dblue tw-700'>${coin}</h3>
-                  <p class='txt ts-18 tc-gray tw-400'>/USD</p>
+                  <h3 class='txt ts-18 ts-lg-24 tc-dblue tw-700'>${coin}</h3>
+                  <p class='txt ts-16 ts-lg-18 tc-gray tw-400'>/USD</p>
                 </div>
                 <div class="crypto__widget-price">
-                  <p class="change txt ts-14 tw-700">${change}%</p>
-                  <p class="price txt ts-20 tw-700">$${price}</p>
+                  <p class="change txt ts-12 ts-lg-14 tw-700">${change}%</p>
+                  <p class="price txt ts-16 ts-lg-20 tw-700">$${price}</p>
                 </div>
               </div>`;
             secTable.innerHTML += 

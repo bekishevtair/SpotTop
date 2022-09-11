@@ -178,7 +178,6 @@ function scrollToSection () {
     const offset = $(id).offset().top - head_height
     $('.js-toggle-nav, #nav').removeClass('active')
     $("html, body").animate({ scrollTop: offset }, 500)
-    
   })
 }
 

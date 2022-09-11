@@ -1095,7 +1095,8 @@ table {
     width: 100%;
     height: 80px;
     background: #FBFBFC;
-    z-index: 990;
+    position: fixed;
+    z-index: 999;
   }
   .header__row {
     display: flex;
@@ -1212,10 +1213,9 @@ table {
   }
   .nav {
     position: fixed;
-    top: 80px;
     right: 0;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100vh;
     transform: translateX(100%);
     visibility: hidden;
     opacity: 0;
@@ -1223,10 +1223,12 @@ table {
     z-index: 989;
   }
   .nav__wrapper {
+    padding-top: 80px;
     width: 100%;
     min-height: 100%;
-    background: #ccc;
-    overflow-y: scroll;
+    background: #FBFBFC;
+    box-shadow: 0 350px 200px 100px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
   }
   .nav__routes {
     display: flex;
@@ -1238,9 +1240,14 @@ table {
     width: 100%;
     margin-bottom: 5px;
     padding: 14px 10px;
-    background: rgb(149, 149, 149);
+    border-bottom: 1px solid #d0d0d6;
     text-decoration: none;
-    color: #000000;
+    color: #0c0d29;
+    transition: 0.1s;
+    font-weight: 500;
+  }
+  .nav__routes-item:hover {
+    color: #f29d3e;
   }
   .nav__routes-item:last-child {
     margin-bottom: 0;
@@ -1295,6 +1302,8 @@ table {
     opacity: 1;
   }
   .toggle-nav {
+    position: relative;
+    z-index: 99;
     width: 68px;
     height: 68px;
     display: flex;
@@ -1302,11 +1311,13 @@ table {
     align-items: center;
   }
   .toggle-nav__wrapper {
+    border-radius: 50%;
+    background: #f6d25d;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 60px;
+    height: 60px;
   }
   .toggle-nav__wrapper.active .toggle-nav__area span:nth-of-type(1), .toggle-nav__wrapper.active .toggle-nav__area span:nth-of-type(3) {
     transition-delay: 0s, 0.2s;
@@ -1334,7 +1345,7 @@ table {
   .toggle-nav__area span {
     width: 26px;
     height: 2px;
-    background-color: #bbc1c7;
+    background-color: #0c0d29;
     display: block;
   }
   .toggle-nav__area span:nth-of-type(1) {
@@ -1365,21 +1376,12 @@ table {
     transform: translateX(320px);
     z-index: 991;
   }
+  .toggle-nav {
+    position: relative;
+    z-index: 99;
+  }
   .toggle-nav__wrapper {
     transition: all 0.3s ease-in-out;
-  }
-  .toggle-nav__wrapper.active {
-    transform: translateX(calc((100vw - 540px) / 2 - 336px));
-  }
-}
-@media (min-width: 768px) {
-  .toggle-nav__wrapper.active {
-    transform: translateX(calc((100vw - 720px) / 2 - 336px));
-  }
-}
-@media (min-width: 992px) {
-  .toggle-nav__wrapper.active {
-    transform: translateX(calc((100vw - 960px) / 2 - 336px));
   }
 }
 @media (min-width: 1200px) {
@@ -1994,6 +1996,9 @@ table {
     background: #FBFBFC;
     padding-top: 80px;
   }
+  .view .section:nth-of-type(1) {
+    padding-top: 80px;
+  }
   .view--homepage .section:nth-of-type(1) {
     padding-bottom: 80px;
   }
@@ -2189,11 +2194,10 @@ table {
     background: 2px solid #FBFBFC;
   }
   .crypto-value {
-    position: relative;
     width: 0;
-    max-width: 86px;
-    height: 0;
-    display: block;
+    visibility: hidden;
+    max-width: 0px;
+    opacity: 0;
     cursor: pointer;
     text-align: end;
   }
@@ -2208,6 +2212,7 @@ table {
     border-bottom: 1px solid #e4e4eb;
   }
   .crypto__table thead tr th {
+    padding: 0;
     text-align: end;
     vertical-align: middle;
     padding: 0 10px;
@@ -2244,8 +2249,11 @@ table {
   }
   .crypto__table tbody tr td:nth-of-type(2) {
     font-weight: 600;
-    min-width: 140px;
+    min-width: 206px;
     color: #7a7b80;
+  }
+  .crypto__table tbody tr td:nth-of-type(3) {
+    min-width: fit-content;
   }
   .crypto__table tbody tr p {
     display: inline-block;
@@ -2262,8 +2270,7 @@ table {
     border-radius: 36px;
     background: #FFFFFF;
     border: 1px solid #e2e3e4;
-    margin-bottom: 14px;
-    margin-right: 14px;
+    margin: 8px;
   }
   .crypto__widget-logo {
     display: block;
@@ -2310,7 +2317,7 @@ table {
     display: flex;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: fit-content;
     cursor: pointer;
   }
   .crypto__calc-box .crypto__label img {
@@ -2320,6 +2327,8 @@ table {
     display: flex;
     min-height: 60px;
     max-height: 60px;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     margin-top: 14px;
     background: transparent;
@@ -2351,6 +2360,8 @@ table {
     visibility: hidden;
   }
   .crypto__calc-select {
+    padding: 0 14px 0 0;
+    position: relative;
     width: 50%;
   }
   .crypto__calc-select-field {
@@ -2358,7 +2369,7 @@ table {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     border-radius: 10px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.001);
   }
@@ -2375,17 +2386,27 @@ table {
     text-transform: capitalize;
     color: #7d7e90;
   }
+  .crypto__calc-select-field::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 70%;
+    top: 15%;
+    left: -14px;
+    background: #7d7e90;
+  }
   .crypto__calc-select-list {
     overflow-y: auto;
-    max-height: 300px;
+    max-height: 240px;
     position: absolute;
+    right: 0;
     width: fit-content;
-    max-width: 320px;
+    max-width: 230px;
     min-width: 200px;
     margin-top: 16px;
     background: #181a50;
     color: #7d7e90;
-    border-radius: 14px;
+    border-radius: 18px;
     visibility: hidden;
     opacity: 0;
     transition: all ease-in-out 0.2s;
@@ -2420,7 +2441,9 @@ table {
     transition: 0.1s all ease-in-out;
   }
   .crypto__calc .converted-result {
+    position: relative;
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
   .crypto__calc .converted-result:nth-of-type(1) input {
@@ -2431,15 +2454,17 @@ table {
     cursor: default;
   }
   .crypto__calc .converted-result:nth-of-type(1) input[id=converted-result-main] {
+    position: relative;
     max-width: 600px;
+    width: 100%;
     text-align: center;
     height: 100px;
     color: #FFFFFF;
-    font-size: 80px;
+    font-size: 6vmax;
     font-weight: 700;
   }
   .crypto__calc .converted-result:nth-of-type(1) input[id=converted-result-smaller] {
-    min-width: 50%;
+    min-width: 100%;
     height: 60px;
     color: #FFFFFF;
     font-weight: 600;
@@ -2451,6 +2476,15 @@ table {
     color: #7d7e90;
     font-weight: 600;
     font-size: 16px;
+  }
+  .crypto__calc .converted-result::after {
+    position: absolute;
+    content: "";
+    top: 5%;
+    right: 0;
+    height: 90%;
+    width: 30%;
+    background: linear-gradient(to right, transparent, #0c0d29 80%);
   }
   .crypto .change {
     position: relative;

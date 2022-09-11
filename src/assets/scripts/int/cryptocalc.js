@@ -1,9 +1,12 @@
+addSelected()
 
 
-  $(document).on('click', '.crypto__calc-select-list-item input', function(){
-    $('.selected').removeClass('selected')
-    $(this).addClass('selected')
-  })
+  function addSelected () {
+    $(document).on('click', '.crypto__calc-select-list-item input', function(){
+      $('.selected').removeClass('selected')
+      $(this).addClass('selected')
+    })
+  }
 
   fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Clitecoin%2Cripple%2Ccardano%2Cdogecoin%2Ctether%2Csolana%2Cethereum-classic&vs_currencies=usd&include_market_cap=true&include_24hr_change=true')
   .then(res => res.json())
@@ -30,11 +33,11 @@
         document.querySelector('#crypto__calc').oninput = ()=>{
           const amount = document.querySelector("#input-amount").value;
           const selected = document.querySelector(".selected").value;
-          const result = amount*selected
+          const result = amount * selected
 
           document.querySelector('#converted-result-main').value = `${result.toFixed(0)}`;
           document.querySelector('#converted-result-smaller').value = `${result.toFixed(0)}`;
-          document.querySelector('#converted-result-smaller-2').value = `${$result.toFixed(3)}`;
+          document.querySelector('#converted-result-smaller-2').value = `${result.toFixed(3)}`;
         };
       }
 
