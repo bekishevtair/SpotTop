@@ -32,9 +32,7 @@ fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cli
             secTable.innerHTML += 
             `
               <tr class='crypto ${change < 0 ? 'falling' : 'rising'}'>
-                <td>
-                  -
-                </td>
+              
                 <td>
                   <img id='img-on-other-pages' src="../../public/img/icons/ico-${coin}.svg" alt="">
                   <img id='img-on-other-homepage' src="../public/img/icons/ico-${coin}.svg" alt="">

@@ -68,7 +68,7 @@
         height: 2px;
         background: map-get($bc, 'gray' );
         position: absolute;
-        top: 49px;
+        top: 40px;
         transition: all .2s ease-in-out;
       }
       &::before {
@@ -194,7 +194,7 @@
     }
     &__exp {
       width: 100%;
-      background: rgb(149, 149, 149);
+      // background: rgb(149, 149, 149);
 
       input {
         display: none;
@@ -202,7 +202,7 @@
         &:checked {
           ~ .nav__exp {
             &-head {
-              background: rgb(129, 129, 129);
+              // background: rgb(129, 129, 129);
             }
             &-body {
               padding: 10px 10px;
@@ -225,6 +225,12 @@
         width: 100%;
         padding: 14px 10px;
         transition: all .1s ease-in-out;
+        cursor: pointer;
+        color: map-get($bc, 'dblue' );
+        font-weight: 500;
+        &:hover {
+          color: map-get($bc,'orange' );
+        }
       }
       &-body {
         display: flex;
@@ -242,7 +248,7 @@
         transition: padding .2s .2s ease-in-out, opacity .2s ease-in-out, line-height .2s .2s ease-in-out;
         
         &:hover {
-          background: rgba(139, 139, 139);
+          color: map-get($bc, 'orange' );
         }
       }
     }
@@ -373,7 +379,7 @@
 }
 @media (min-width: $s-xl) {
   .header {
-    height: map-get($hh, 'desk');
+    height: map-get($hh, 'mob');
 
     &__col {
       &:last-child {
@@ -392,7 +398,7 @@
       }
     }
     &__link, &__exp-head {
-      height: map-get($hh, 'desk');
+      height: map-get($hh, 'mob');
     }
   }
   .toggle-nav {
