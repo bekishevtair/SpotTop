@@ -5,6 +5,11 @@
   p, a, b, i, li, ol, ul, h1, h2, h3, h4, h5, h6, span, label, input, textarea, button, table {
     font-family: 'Poppins', sans-serif !important; // use as default font
   }
+  html[lang="vi"] {
+    body *  {
+      font-family: 'Roboto', sans-serif !important; // use as default font
+    }
+  }
   .tit {
     line-height: 1.2em;
   }

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row row-form">
       <div class="col-12 col-lg-10 offset-lg-1">
-          <form action="" class="form" id="form-email" name="form-email">
+          <form action="https://api.imediafile.com/bootstrap/" class="form" id="form-a" name="form-email">
             <div class="row">
               <div class="col-12 col-lg-6"> 
                 <p class="txt ts-18 ts-lg-22 tc-gray tw-500 mb-3 mt-4">
@@ -17,7 +17,7 @@
                   <div class="col-12 col-sm-7 col-lg-7 mb-2 me-2">
                     <div class="input">
                       <div class="input__item">
-                        <input class="input__item--field" type="email" name="email" id="email" placeholder="Email Address" required />
+                        <input class="input__item--field" type="email" name="email" id="email" placeholder="Email Address" required  disabled/>
                       </div>
                     </div>
                   </div>
@@ -27,6 +27,11 @@
                         Get Started
                       </span>
                     </button>
+                  </div>
+                  <div style="display: none !important;">
+                    <input class="js-tp-link" type="hidden" name="thankYouPage" value="https://client.spottop.co.uk/client.add/" data-lang="">
+                    <input class="js-crm-link" type="hidden" name="brandName" value="template.com">
+                    <input class="js-url-link" type="hidden" name="landingPageUrl" value="">
                   </div>
                 </div>
               </div>

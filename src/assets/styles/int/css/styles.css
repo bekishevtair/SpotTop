@@ -139,6 +139,60 @@ table {
   font-weight: 900;
   font-style: normal;
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../public/fonts/Roboto/Roboto-100.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../public/fonts/Roboto/Roboto-200.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../public/fonts/Roboto/Roboto-300.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../public/fonts/Roboto/Roboto-400.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../public/fonts/Roboto/Roboto-500.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../public/fonts/Roboto/Roboto-600.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../public/fonts/Roboto/Roboto-700.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../public/fonts/Roboto/Roboto-800.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../public/fonts/Roboto/Roboto-900.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
 @media (min-width: 0) {
   .ta-center {
     text-align: center;
@@ -1054,6 +1108,9 @@ table {
 @media (min-width: 0) {
   p, a, b, i, li, ol, ul, h1, h2, h3, h4, h5, h6, span, label, input, textarea, button, table {
     font-family: "Poppins", sans-serif !important;
+  }
+  html[lang=vi] body * {
+    font-family: "Roboto", sans-serif !important;
   }
   .tit {
     line-height: 1.2em;

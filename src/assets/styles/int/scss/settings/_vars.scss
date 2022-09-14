@@ -50,14 +50,18 @@ $bc: (
 );
 
 // Font options
-$fonts: 'Poppins', 'Inter';
+$fonts: 'Poppins', 'Inter', 'Roboto';
 $font-weight: (
   min: (
     Poppins: 1,
+    Roboto: 1,
+    IBMPlexSans: 1,
     Inter: 1
-  ),
-  max: (
+    ),
+    max: (
     Poppins: 9,
+    IBMPlexSans: 9,
+    Roboto: 9,
     Inter: 9
   )
 );
