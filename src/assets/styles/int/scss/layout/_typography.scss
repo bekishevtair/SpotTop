@@ -18,6 +18,7 @@
   }
   .link {
     transition: .2s;
+    cursor: pointer;
     &-footer {
       text-decoration: underline;
       &:hover {

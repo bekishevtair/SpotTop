@@ -1120,6 +1120,7 @@ table {
   }
   .link {
     transition: 0.2s;
+    cursor: pointer;
   }
   .link-footer {
     text-decoration: underline;
