@@ -2656,6 +2656,10 @@ table {
   .box-bg-dblue p, .box-bg-dblue h1, .box-bg-dblue h2, .box-bg-dblue h3, .box-bg-dblue h4 {
     color: #FFFFFF;
   }
+  .box-notification {
+    padding: 20px 0;
+    background: #d9181c;
+  }
   .hr-gray {
     width: 96%;
     margin-top: 24px;

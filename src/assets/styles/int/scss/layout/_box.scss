@@ -74,6 +74,10 @@
         
       }
     }
+    &-notification {
+      padding: 20px 0;
+      background: map-get($dc, 'error' );
+    }
   }
   .hr-gray {
     width: 96%;
@@ -101,7 +105,6 @@
     &-bg {
       &-gray {
         padding-bottom: 0;
-
       }
     }
   }
