@@ -36,8 +36,10 @@
     // init controller
     var controller = new ScrollMagic.Controller();
   </script>
+ 
 </head>
 <body>
+
   <div style="display: none !important;">
     <input id="js-path" type="hidden" name="path" value="../comp/en" disabled />
   </div>
@@ -75,17 +77,108 @@
         </div>
       </div>
     </section>
-    <section class="section" id="sec-02">
+    <section class="section">
       <div class="container">
-        <div class="js-import" data-import="sec-crypto-widget-for-hp">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <div class="row">
+              <div class="col-12">
+                <div class="box-border box-border-white p-3 mb-2">
+                 <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                  {
+                  "width": "100%",
+                  "height": "534",
+                  "defaultColumn": "overview",
+                  "screener_type": "crypto_mkt",
+                  "displayCurrency": "USD",
+                  "colorTheme": "light",
+                  "locale": "en",
+                  "isTransparent": true
+                }
+                  </script>
+                </div>
+                <!-- TradingView Widget END -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+              <div class="row">
+                <div class="col-lg-12 col-md-4">
+                  <div class="box-border box-border-white p-3 mb-2">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                      <div class="tradingview-widget-container__widget"></div>
+                      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                      {
+                      "symbol": "FX:EURUSD",
+                      "width": "100%",
+                      "height": "100%",
+                      "locale": "en",
+                      "dateRange": "12M",
+                      "colorTheme": "light",
+                      "isTransparent": true,
+                      "autosize": true,
+                      "largeChartUrl": ""
+                    }
+                      </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-4">
+                  <div class="box-border box-border-white p-3 mb-2">
+                    <!-- TradingView Widget BEGIN -->
+                     <div class="tradingview-widget-container">
+                       <div class="tradingview-widget-container__widget"></div>
+                       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                       {
+                       "symbol": "FX_IDC:VNDEUR",
+                       "width": "100%",
+                       "height": "100%",
+                       "locale": "en",
+                       "dateRange": "12M",
+                       "colorTheme": "light",
+                       "isTransparent": true,
+                       "autosize": true,
+                       "largeChartUrl": ""
+                     }
+                       </script>
+                     </div>
+                     <!-- TradingView Widget END -->
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-4">
+                  <div class="box-border box-border-white p-3">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                      <div class="tradingview-widget-container__widget"></div>
+                      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                      {
+                      "symbol": "FX_IDC:VNDUSD",
+                      "width": "100%",
+                      "height": "100%",
+                      "locale": "en",
+                      "dateRange": "12M",
+                      "colorTheme": "light",
+                      "isTransparent": true,
+                      "autosize": true,
+                      "largeChartUrl": ""
+                    }
+                      </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
-      </div>
-      <div class="wrapper d-flex justify-content-center">
-        <a href="prices/" target="_blank" class="btn btn-s4 btn-border btn-w-180">
-          <span class="txt ts-20"> 
-            View more
-          </span>
-        </a>
+        <div class="row">
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener" target="_blank"><span class="blue-text">All rates</span></a> by TradingView</div>
+        </div>
       </div>
     </section>
     <section class="section" id="sec-pin">
@@ -94,7 +187,7 @@
           <div class="col-12 col-lg-5 ps-3" id="pin1">
             <div class="pin">
               <h3 class="tit ts-30 ts-lg-44 tc-dblue tw-700 mb-3" >
-                The most reputable crypto exchange
+                The most reputable broker
               </h3>
               <p class="txt ts-18 ts-lg-24 tc-gray tw-400 mb-5">
                 SpotTop is the best pick for new and seasoned traders looking for market exposure.
@@ -105,10 +198,10 @@
             <div class="row mb-lg-5 mb-3">
               <div class="col-12 col-sm-6">
                 <h4 class="tit ts-24 ts-lg-28 tc-dblue tw-700 mb-3"> 
-                  Intuitive Management of Your Crypto
+                  Sophisticated Currency Management
                 </h4>
                 <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
-                  Our platform offers a one-stop shop for buying, selling, and monitoring your digital assets with a truly user-friendly interface.  
+                  Our platform offers a one-stop shop for buying, selling, and monitoring your digital assets with a truly user-friendly interface.      
                 </p>
               </div>
               <div class="col-12 col-sm-6">
@@ -140,7 +233,7 @@
                 <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
                   You can access your portfolio and the essential features of our platform at any time with our Android app.  
                 </p>
-                <a href="https://play.google.com/store/apps/details?id=io.coinfy.dev" target="_blank" class="btn btn-s4 btn-yellow btn-w-180">
+                <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader5" target="_blank" class="btn btn-s4 btn-yellow btn-w-180">
                   <span class="txt ts-20"> 
                     Google Play
                   </span>
@@ -160,7 +253,7 @@
         <div class="row" >
           <div class="col-12 col-lg-5 ps-3">
             <h3 class="tit ts-30 ts-lg-44 tc-dblue tw-700 mb-4" >
-              The most reputable crypto exchange
+              The most reputable broker
             </h3>
             <p class="txt ts-18 ts-lg-24 tc-gray tw-400 mb-5 pe-5">
               SpotTop is the best pick for new and seasoned traders looking for market exposure.
@@ -170,10 +263,10 @@
             <div class="row mb-lg-5 mb-5">
               <div class="col-12 col-sm-6">
                 <h4 class="tit ts-24 ts-lg-28 tc-dblue tw-700 mb-3"> 
-                  Intuitive Management of Your Crypto
+                  Sophisticated Currency Management
                 </h4>
                 <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
-                  Our platform offers a one-stop shop for buying, selling, and monitoring your digital assets with a truly user-friendly interface.  
+                  Our platform offers a one-stop shop for buying, selling, and monitoring your digital assets with a truly user-friendly interface.      
                 </p>
               </div>
               <div class="col-12 col-sm-6">
@@ -209,7 +302,7 @@
                 <p class="txt ts-16 ts-lg-18 tc-gray tw-400 mb-3">
                   You can access your portfolio and the essential features of our platform at any time with our Android app.
                 </p>
-                <a href="https://play.google.com/store/apps/details?id=io.coinfy.dev" target="_blank" class="btn btn-s4 btn-yellow btn-w-180 mb-4">
+                <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader5" target="_blank" class="btn btn-s4 btn-yellow btn-w-180 mb-4">
                   <span class="txt ts-20"> 
                     Google Play
                   </span>

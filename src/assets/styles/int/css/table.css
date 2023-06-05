@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+  border-radius: 20px;
+}
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+th {
+  border: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+#wp-table_wrapper {
+  padding: 20px;
+  border-radius: 20px;
+}
+#wp-table_wrapper table, #wp-table_wrapper table tr, #wp-table_wrapper table td, a {
+  transition: 0.2s;
+}
+
+
+#wp-table_wrapper table.dataTable thead .sorting {
+  background-image: url("../img/ico-filter.svg") !important;
+  background-position: 95% center !important;
+  background-repeat: no-repeat !important;
+  background-size: 10px;
+}
+#wp-table_wrapper.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #0c0d29 !important;
+  background: #e8e8ed !important;
+  border-radius: 10px !important;
+  border: none !important;
+  margin: 0 5px;
+}
+#wp-table_wrapper.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: #0c0d29 !important;
+  background: #d1d1dc !important;
+}
+#wp-table_wrapper.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+#wp-table_wrapper.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #fff !important;
+  background: #0c0d29 !important;
+  border-radius: 10px !important;
+  border: none !important;
+}
+#wp-table_wrapper th {
+  background: #0c0d29;
+  border-right: none !important;
+  font-size: 14px;
+}
+#wp-table_wrapper td {
+  border-right: none !important;
+  font-size: 14px;
+}
+#wp-table_wrapper table.dataTable.stripe tbody tr.odd,
+#wp-table_wrapper table.dataTable.display tbody tr.odd {
+  background-color: #f2f2f3 !important;
+}
+#wp-table_wrapper table.dataTable.display tbody tr.odd > .sorting_1,
+#wp-table_wrapper table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+  background-color: #f2f2f3;
+}
+#wp-table_wrapper #wp-table {
+  margin-bottom: 15px;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+#wp-table_wrapper.dataTables_wrapper .dataTables_filter input {
+  margin-left: 0.5em;
+  border: none !important;
+  padding: 14px;
+  background: #e8e8ed;
+  border-radius: 10px;
+  outline: none !important;
+}
+#wp-table_wrapper label {
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0 !important;
+}
+#wp-table_wrapper select {
+  padding: 14px 10px;
+  margin: 0 10px;
+  border: none;
+  background: #e8e8ed;
+  border-radius: 10px;
+}
+#wp-table_wrapper .dataTables_length,
+#wp-table_wrapper .dataTables_filter {
+  padding-bottom: 15px;
+}
+#wp-table_wrapper table tr:last-child {
+  border-radius: 20px;
+}
+.iframe html {
+  background: #fbfbfc;
+}
+html {
+  background: #fbfbfc;
+
+}
+.dataTables_wrapper{
+  background: #f2f2f3 !important;
+}
